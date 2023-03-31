@@ -10,8 +10,8 @@
 using namespace std;
 
 int main(){
-    int room_length;
-    int room_width;
+    int room_length{0};
+    int room_width{0};
     
     cout<<"Enter room length: " <<endl;
     cin>>room_length;
