@@ -7,6 +7,8 @@
 
 #include <iostream>
 
+#include <vector>
+
 using namespace std;
 
 int main (){
@@ -36,7 +38,7 @@ int main (){
     for (int i5{1}, j{5}; i5<=5; ++i5, ++j)
         cout<<i5<<" + "<<j <<" = " <<(i5+j)<<endl;
     
-    for (int i6{1}; i6<=1000; i6++){
+    for (int i6{1}; i6<=100; i6++){
         cout<<i6;
         if (i6%10==0){
             cout<<endl;
@@ -46,10 +48,24 @@ int main (){
     }
 
         
-        for (int i7{1}; i7<=1000; i7++ ) {
+        for (int i7{1}; i7<=100; i7++ ) {
             cout<<i7;
             cout<<((i7%10==0)? "\n":" ");
         }
+    
+    vector <int> nums {10, 20, 30, 40, 50, 60, 70, 80, 90,};
+    for(unsigned i8{0}; i8<nums.size(); i8++) {
+        cout<<nums[i8]; cout<<" ";
+        
+    }
+
+    vector <int> nums2 {10, 20, 30, 40, 50, 60, 70, 80, 90,};
+    for(unsigned i9{0}; i9<=nums2.at(5); i9++) {
+        cout<<i9;
+        cout<<((i9/nums2.at(3)!=0)? "\n":" " );
+        
+    }
+    
     
 
         
