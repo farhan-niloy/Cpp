@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
@@ -26,6 +27,7 @@ int main (){
         
     if (tempretures.size()!=0)
         average_temp =total/tempretures.size();
+    cout<<fixed <<setprecision(1);
     cout<<"Average tempreture is: " <<average_temp <<endl;
 
     return 0;
