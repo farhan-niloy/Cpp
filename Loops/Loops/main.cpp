@@ -35,6 +35,22 @@ int main (){
     
     for (int i5{1}, j{5}; i5<=5; ++i5, ++j)
         cout<<i5<<" + "<<j <<" = " <<(i5+j)<<endl;
+    
+    for (int i6{1}; i6<=1000; i6++){
+        cout<<i6;
+        if (i6%10==0){
+            cout<<endl;
+        } else {
+            cout<<" ";
+        }
+    }
+
+        
+        for (int i7{1}; i7<=1000; i7++ ) {
+            cout<<i7;
+            cout<<((i7%10==0)? "\n":" ");
+        }
+    
 
         
         return 0;
