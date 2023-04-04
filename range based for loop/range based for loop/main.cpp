@@ -29,6 +29,23 @@ int main (){
         average_temp =total/tempretures.size();
     cout<<fixed <<setprecision(1);
     cout<<"Average tempreture is: " <<average_temp <<endl;
+    
+    for (auto val:{1,2,3,4,5})
+        cout<<val<<endl;
+        
+    for(auto c:"I love you")
+        if(c == 'l'){
+            cout<<'h';
+        } else if(c== 'o'){
+            cout<<'a';
+        } else if(c=='v'){
+            cout<<'t';
+        } else {
+            cout<<c;
+        }
+           
+        
+    
 
     return 0;
 }
