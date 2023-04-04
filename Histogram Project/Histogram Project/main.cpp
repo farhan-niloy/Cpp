@@ -26,7 +26,13 @@ int main (){
     }
     
     for (auto val:data) {
-        cout<<val <<" ";
+        for (int i{1}; i<=val; i++) {
+            if(i%5==0)
+                cout<<"*";
+            else
+                cout<<"=";
+        }
+        cout<<endl;
     }
     
     return 0;
