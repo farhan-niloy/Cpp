@@ -50,6 +50,21 @@ int main (){
         cin>>number;
     }
     
+    bool okay{false};
+    
+    while(!okay){
+        int numbr{0};
+        cout<<"Enter any number between 1 to 5: ";
+        cin>>numbr;
+        if(numbr<=1 || numbr>=5) {
+            cout<<"Out of range!" <<endl;;
+        }else {
+            cout<<"Thanks!" <<" ";
+            cout<<numbr <<endl;
+            okay = true;
+        }
+    }
+    
     
     
     
