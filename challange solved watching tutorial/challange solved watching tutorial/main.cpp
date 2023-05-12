@@ -14,8 +14,8 @@ int main() {
         cout<<"P - print number" <<endl;
         cout<<"A - add number" <<endl;
         cout<<"M - mean of number" <<endl;
-        cout<<"L - Biggest number" <<endl;
-        cout<<"S - Smallest number" <<endl;
+        cout<<"L - largest number" <<endl;
+        cout<<"S - smallest number" <<endl;
         cout<<"Q - quit" <<endl;
         cout<<"==================================" <<endl;
         cout<<"Choose what whould you like to do: " ;
@@ -53,6 +53,34 @@ int main() {
             } else {
                 cout<<" [] The list is empty" <<endl;
             }
+        } else if (selection == 'l' || selection == 'L') {
+            if (nums.size() != 0) {
+                int largest = nums.at(0);
+                for (auto num : nums)
+                    if (largest<num)
+                        largest = num;
+                
+                cout<<"The largest number is: " <<largest <<endl;
+                
+            } else {
+                cout<<"The list is empty" <<endl;
+            }
+        } else if (selection == 'S'|| selection == 's') {
+            if(nums.size()!=0){
+                int smallest = nums.at(0);
+                for (auto i:nums)
+                    if (smallest>i)
+                        smallest = i;
+                    
+                    cout<<"The smallest number is: " <<smallest <<endl;
+                    
+                } else {
+                    cout<<"The list is empty!";
+            }
+        } else if (selection == 'q' || selection == 'Q') {
+            cout<<"Good bye!" <<endl;
+        }  else {
+            cout<<"Invalid selection" <<endl;
         }
 
     } while (selection!= 'Q' && selection != 'q');
