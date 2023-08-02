@@ -27,7 +27,12 @@ int main (){
     cout<<"The floor of " <<num <<" is: " <<floor(num) <<endl;
     cout<<"The round of " <<num <<" is: " <<round(num) <<endl;
     
+    double power {};
+    cout<<"Enter a power to raise" << num <<" to:" <<endl;
+    cin>>power;
+    cout<<num <<"raised to the " <<power << " power is: " <<pow(num, power) <<endl;
     
+    cout<<8endl;
  
 
 
