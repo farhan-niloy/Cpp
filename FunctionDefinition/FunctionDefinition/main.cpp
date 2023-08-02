@@ -15,7 +15,8 @@ double clac_circle(double radius){
 }
 
 double calc_cylinder_volume(double radius, double height){
-    return pi*radius*radius*height;
+    //return pi*radius*radius*height;
+    return clac_circle(radius)*height;
 }
 
 void circle_area (){
@@ -36,7 +37,7 @@ void volume_cylinder(){
     cout<<"Enter the height of the cylinder: ";
     cin>>height;
     
-    cout<<"The volume of the cylinder with radius " <<radius <<" and height " <<height <<" is: " <<calc_cylinder_volume(radius, height);
+    cout<<"The volume of the cylinder with radius " <<radius <<" and height " <<height <<" is: " <<calc_cylinder_volume(radius, height) <<endl;
     
 }
 
