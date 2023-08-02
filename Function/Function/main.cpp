@@ -32,7 +32,7 @@ int main (){
     cin>>power;
     cout<<num <<"raised to the " <<power << " power is: " <<pow(num, power) <<endl;
     
-    cout<<8endl;
+    cout<<endl;
  
 
 
