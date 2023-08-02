@@ -6,9 +6,30 @@
 //
 
 #include <iostream>
+#include <cmath> //required
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+int main (){
+    
+    double num{};
+    
+    cout<<"Enter a number (double): ";
+    cin>>num;
+    
+    cout<<"The sqrt of " <<num <<" is: " <<sqrt(num) <<endl;
+    cout<<"The cubed root of " <<num <<" is: " <<cbrt(num) <<endl;
+    
+    cout<<"The sine of " <<num <<" is: " <<sin(num) <<endl;
+    cout<<"the cosine of " <<num <<" is: " <<cos(num) <<endl;
+    
+    cout<<"The sile of " <<num <<" is: " <<ceil(num) <<endl;
+    cout<<"The floor of " <<num <<" is: " <<floor(num) <<endl;
+    cout<<"The round of " <<num <<" is: " <<round(num) <<endl;
+    
+    
+ 
+
+
     return 0;
 }
