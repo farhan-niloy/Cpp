@@ -57,6 +57,8 @@ int main() {
     
     print_vector(xyz);
     pass_by_value3(xyz);
+
+    cout<<"vector after callin pass_by_value3" <<endl;
     print_vector(xyz);
 
 
