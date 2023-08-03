@@ -55,9 +55,9 @@ int main() {
     pass_by_value2(ss);
     cout<<"string after calling pass_by_value2 " <<ss <<endl;
     
-    print_vector(vv);
-    pass_by_vlue3(vv);
-    print_vector(vv);
+    print_vector(xyz);
+    pass_by_value3(xyz);
+    print_vector(xyz);
 
 
     
