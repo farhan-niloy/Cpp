@@ -20,29 +20,56 @@ double calc_cost(double base_cost, double tax_rate, double shipping) {
 };
 
 void greeting(string name, string prefix, string suffix){
-    cout<<"Hello, " <<prefix <<name <<suffix <<endl;
+    cout<<"Hello, " <<prefix+" " +name+ " "+ suffix <<endl;
 };
 
 int main() {
     
-    double cost{0};
+    double base_cost{};
     
-    cost = calc_cost(200, 0.08);
+    string name{}, prefix{}, suffix{};
     
-    cout<<fixed <<setprecision(2);
-    cout<<"Cost is: " <<cost <<endl;
-    
-    cost = calc_cost(200, 0.08, 6);
-    
-    cout<<fixed <<setprecision(2);
-    cout<<"Cost is: " <<cost <<endl;
-    
-    cost = calc_cost(200);
-    
-    cout<<fixed <<setprecision(2);
-    cout<<"Cost is: " <<cost <<endl;
-    
-    greeting("Rust");
-    
-    return 0;
+   
+     
+    if(prefix!= "skip" || prefix!="Skip"){
+        cout<<"Enter your Prefix or Skip: " ;
+        cin>>prefix;
+        
+        if(name!="skip" || name!="Skip"){
+            cout<<"Enter your Suffix Or Skip: ";
+            cin>>name;
+            
+            if (suffix!="skip" || suffix!="Skip"){
+                cout<<"Enter your Suffix or Skip: ";
+                cin>>suffix;
+            }else {
+                cout<<"Enter base cost of your product: ";
+                cin>>base_cost;
+                
+                greeting(name, prefix, suffix);
+                
+                cout<<"Your total cost is: ";
+                calc_cost(base_cost);
+            }
+            } else {
+                cout<<"Enter base cost of your product: ";
+                cin>>base_cost;
+                
+                greeting(name, prefix, suffix);
+                
+                cout<<"Your total cost is: ";
+                calc_cost(base_cost);
+            }
+    } else {
+        cout<<"Enter base cost of your product: ";
+        cin>>base_cost;
+        
+        greeting(name, prefix, suffix);
+        
+        cout<<"Your total cost is: ";
+        calc_cost(base_cost);
+        
+    }
+   
+
 }
