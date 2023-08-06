@@ -18,7 +18,7 @@ int main() {
     
     print_arry(scores, 5);
     set_arry(scores, 5, 100);
-    cout<<endl;
+    
     print_arry(scores, 5);
     
     
