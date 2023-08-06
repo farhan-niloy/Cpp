@@ -12,39 +12,48 @@ using namespace std;
 int num{5000};
 
 void global_example();
-void local_example();
+void local_example(int x);
 void static_local_example();
+
+
 
 int main() {
 
     global_example();
-    local_example();
+   
+    global_example();
+    
+    local_example(500);
+    static_local_example();
     static_local_example();
     
     
     return 0;
 }
 
-
-void global_example(){
-    cout<<"Global num is: " <<num <<" -start" <<endl;
-    num +=1000;
-    cout<<"Global num is: " <<num <<" -end" <<endl;
-    
-}
-
-void local_example(){
-    int num{300};
+void local_example(int x){
+    int num{3000};
     cout<<endl<<endl;
     cout<<"Local num is: " <<num <<" -start" <<endl;
-    num *=100;
+    num = x;
+    num *=500;
     cout<<"Local num is: " <<num <<" -end" <<endl;
 }
 
+
+void global_example(){
+    cout<<"Global num is: " <<num <<" -start" <<endl;
+    num *=500;
+    cout<<"Global num is: " <<num <<" -end" <<endl;
+
+}
+
+
+
 void static_local_example(){
-    static int num{5000};
+    static int num {2000};
     cout<<endl<<endl;
     cout<<"Static Local num is: " <<num <<" -start" <<endl;
-    num *=100;
+    num +=400;
     cout<<"Static Local num is: " <<num <<" -end" <<endl;
 }
