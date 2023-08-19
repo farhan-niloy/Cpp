@@ -29,14 +29,14 @@ unsigned long long factorial(unsigned long long n){
 
 int main() {
     
-    vector<int>vecFib{5,30,40};
+    vector<int>vecFibo{5,30,40};
     vector<int>vecFac{3, 8, 12, 20};
     
     
     cout<<"Printing fibonacci numbers: " <<endl;
     
-    for(int i{0}; i<= vecFib.size()-1; i++){
-        cout<<fibonacci(vecFib[i]) <<endl;
+    for(int i{0}; i<= vecFibo.size()-1; i++){
+        cout<<fibonacci(vecFibo[i]) <<endl;
     }
     
     cout<< "\nPrinting factorial numbers: " <<endl;
