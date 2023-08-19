@@ -11,18 +11,24 @@
 using namespace std;
 
 void print_numbers();
-int add_num_function(int a);
+void the_mean();
 
 void print_numbers( vector<int> numbers){
     for(auto s:numbers)
         cout<<s <<" ";
 }
 
+void the_mean (vector<int> numbers){
+    double total{};
+    for(auto s: numbers)
+        total+=s;
+    cout<<total/numbers.size() <<endl <<endl;
+};
 
 
 int main() {
     
-    vector<int> numbers{2, 4, 5};
+    vector<int> numbers{5, 5, 5};
     char selection{};
     
     do {
@@ -58,6 +64,13 @@ int main() {
                     numbers.push_back(added_number);
                 
                 }
+        } else if(selection=='M' || 'm'){
+            if(numbers.size()==0) {
+                cout<<"The list is empty - Please add number first!" <<endl;
+            } else{
+                cout<<"The mean is: ";
+                the_mean(numbers);
+            }
         }
         
     } while ( selection != 'q' && selection !='Q');
