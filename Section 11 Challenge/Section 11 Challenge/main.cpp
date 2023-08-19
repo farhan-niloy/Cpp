@@ -12,6 +12,8 @@ using namespace std;
 
 void print_numbers();
 void the_mean();
+void small_number();
+void large_number();
 
 void print_numbers( vector<int> numbers){
     for(auto s:numbers)
@@ -25,10 +27,28 @@ void the_mean (vector<int> numbers){
     cout<<total/numbers.size() <<endl <<endl;
 };
 
+void small_number (vector<int> numbers){
+    int smallest{};
+    smallest=numbers.at(0);
+    for(auto s: numbers)
+        if (s<smallest)
+            smallest=s;
+    cout<<smallest <<endl;
+}
+
+void large_number (vector<int> numbers){
+    int largest{};
+    largest=numbers.at(0);
+    for(auto s: numbers)
+        if (s>largest)
+            largest=s;
+    cout<<largest <<endl;
+}
+
 
 int main() {
     
-    vector<int> numbers{5, 5, 5};
+    vector<int> numbers{1, 5, 50};
     char selection{};
     
     do {
@@ -58,24 +78,37 @@ int main() {
                 cin>>added_number;
                 numbers.push_back(added_number);
             }else{
-                    int added_number{};
-                    cout<<"Add number to list: ";
-                    cin>>added_number;
-                    numbers.push_back(added_number);
+                int added_number{};
+                cout<<"Add number to list: ";
+                cin>>added_number;
+                numbers.push_back(added_number);
                 
-                }
-        } else if(selection=='M' || 'm'){
+            }
+        } else if(selection=='M' || selection=='m'){
             if(numbers.size()==0) {
                 cout<<"The list is empty - Please add number first!" <<endl;
             } else{
                 cout<<"The mean is: ";
                 the_mean(numbers);
             }
+        } else if (selection=='S' || selection =='s'){
+            if(numbers.size()==0) {
+                cout<<"The list is empty - please add value first!";
+            } else {
+                cout<<"The smallest number is: ";
+                small_number(numbers);
+            }
+        } else if (selection=='L' || selection =='l'){
+            if(numbers.size()==0) {
+                cout<<"The list is empty - please add value first!";
+            } else {
+                cout<<"The largest number is: ";
+                large_number(numbers);
+            }
+            
         }
         
     } while ( selection != 'q' && selection !='Q');
-    
-    return 0;
-}
-
-
+        
+        return 0;
+    }
