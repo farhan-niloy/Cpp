@@ -10,15 +10,19 @@
 
 using namespace std;
 
-void print_numbers(string s);
+void print_numbers();
+int add_num_function(int a);
 
-
+void print_numbers( vector<int> numbers){
+    for(auto s:numbers)
+        cout<<s <<" ";
+}
 
 
 
 int main() {
     
-    vector<int> nubers{};
+    vector<int> numbers{2, 4, 5};
     char selection{};
     
     do {
@@ -32,12 +36,33 @@ int main() {
         
         cin>>selection;
         
+        
+        if(selection =='P' || selection=='p') {
+            if(numbers.size()==0)
+                cout<<"The list is empty - no data! " <<endl;
+            else{
+                cout<<"[";
+                print_numbers(numbers);
+                cout<<"]" <<endl <<endl;
+            }
+        } else if (selection == 'A' || selection =='a'){
+            if(numbers.size()==0){
+                int added_number{};
+                cout<<"The list is empty - Please input some values: " ;
+                cin>>added_number;
+                numbers.push_back(added_number);
+            }else{
+                    int added_number{};
+                    cout<<"Add number to list: ";
+                    cin>>added_number;
+                    numbers.push_back(added_number);
+                
+                }
+        }
+        
     } while ( selection != 'q' && selection !='Q');
     
     return 0;
 }
 
-void print_nubmers(int num){
-        for(auto num:numbers)
-            cout<<num;
-        };
+
