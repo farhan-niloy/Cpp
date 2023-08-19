@@ -109,6 +109,6 @@ int main() {
         }
         
     } while ( selection != 'q' && selection !='Q');
-        
-        return 0;
-    }
+    
+    return 0;
+}
