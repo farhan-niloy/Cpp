@@ -18,7 +18,7 @@ void display_list(const vector<int> &v);
 
 void handle_add(vector<int> &v);
 
-void calc_mean(const vector<int> &v);
+double calc_mean(const vector<int> &v);
 
 
 
@@ -95,4 +95,9 @@ void handle_add(vector<int> &v){
     cout<<num_to_add <<"Added" <<endl;
 }
 
-void calc_mean(const vector<int> &v);
+double calc_mean(const vector<int> &v){
+    int total{};
+    for(auto num:v)
+        total +=num;
+    return static_cast<double>(total)/v.size();
+}
