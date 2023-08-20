@@ -23,7 +23,7 @@ double calc_mean(const vector<int> &v);
 void handle_smallest(const vector<int> &v);
 void handle_largest(const vector<int> &v);
 
-void handle_unknown(string s);
+void handle_unknown();
 
 
 
@@ -51,10 +51,16 @@ int main() {
             case 'L':
                 handle_largest(numbers);
                 break;
+            case 'F':
+                handle_find(numbers);
+                break;
+            case 'Q':
+                handle_quit();
+                break;
                 
             default:
                 handle_unknown();
-                break
+                break;
                 
         }
         
@@ -129,4 +135,6 @@ void handle_largest(const vector<int> &v) {
     cout<<"The largest number on the list is: " <<largest;
 }
 
-handle
+void handle_unknown(){
+    cout<<"Invalid input please enter again!" <<endl;
+}
