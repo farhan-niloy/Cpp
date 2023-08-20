@@ -20,7 +20,10 @@ void handle_add(vector<int> &v);
 
 double calc_mean(const vector<int> &v);
 
-int handle_smallest(const vector<int> &v);
+void handle_smallest(const vector<int> &v);
+void handle_largest(const vector<int> &v);
+
+void handle_unknown(string s);
 
 
 
@@ -108,7 +111,7 @@ double calc_mean(const vector<int> &v){
     return static_cast<double>(total)/v.size();
 }
 
-int handle_smallest(const vector<int> &v){
+void handle_smallest(const vector<int> &v){
     int smallest;
     smallest = v.at(0);
     for(auto num:v)
@@ -116,3 +119,14 @@ int handle_smallest(const vector<int> &v){
             smallest =num;
     cout<<"The smallest number on the list is: " <<smallest;
 }
+
+void handle_largest(const vector<int> &v) {
+    int largest{};
+    largest=v.at(0);
+    for(auto num:v)
+        if(num>largest)
+            largest=num;
+    cout<<"The largest number on the list is: " <<largest;
+}
+
+handle
