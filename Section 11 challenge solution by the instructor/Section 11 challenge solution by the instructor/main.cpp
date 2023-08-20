@@ -20,7 +20,7 @@ void handle_add(vector<int> &v);
 
 double calc_mean(const vector<int> &v);
 
-
+int handle_smallest(const vector<int> &v);
 
 
 
@@ -41,6 +41,12 @@ int main() {
                 break;
             case 'M':
                 calc_mean(numbers);
+                break;
+            case 'S':
+                handle_smallest(numbers);
+                break;
+            case 'L':
+                handle_largest(numbers);
                 break;
                 
             default:
@@ -100,4 +106,13 @@ double calc_mean(const vector<int> &v){
     for(auto num:v)
         total +=num;
     return static_cast<double>(total)/v.size();
+}
+
+int handle_smallest(const vector<int> &v){
+    int smallest;
+    smallest = v.at(0);
+    for(auto num:v)
+        if (num<smallest)
+            smallest =num;
+    cout<<"The smallest number on the list is: " <<smallest;
 }
