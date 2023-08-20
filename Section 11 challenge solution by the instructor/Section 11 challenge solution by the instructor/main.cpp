@@ -24,6 +24,7 @@ void handle_smallest(const vector<int> &v);
 void handle_largest(const vector<int> &v);
 
 void handle_find(const vector<int> &v);
+bool find(const vector<int> &v, int matched);
 
 void handle_unknown();
 void handle_quit();
@@ -80,6 +81,7 @@ void display_menu(){
     cout<<"M - Calculate the mean of the numbers: " <<endl;
     cout<<"S - The smallest number: " <<endl;
     cout<<"L - The largest number: " <<endl;
+    cout<<"F - Find a number: " <<endl;
     cout<<"-----------------------" <<endl;
     cout<<"Enter your choice: " <<endl;
 }
@@ -146,8 +148,22 @@ void handle_largest(const vector<int> &v) {
     }
 }
 
-void handle_find(vector<int> &v) {
+void handle_find(const vector<int> &v) {
+    int matched;
+    cout<<"Enter the number to find: ";
+    cin>>matched;
     
+    if (find(v, matched))
+        cout<<matched <<"Was found!" <<endl;
+    else
+        cout<<matched <<"Wasn't found!" <<endl;
+}
+
+bool find(const vector<int> &&v, int matched) {
+    for (auto num:v)
+        if(num==matched)
+            return true;
+    return false;
 }
 
 void handle_unknown(){
