@@ -11,6 +11,7 @@
 using namespace std;
 
 void display_menu();
+char get_selection();
 
 
 int main() {
@@ -19,12 +20,11 @@ int main() {
     char selection{};
     
     do {
-        
-        
-        
+        display_menu();
+        selection = get_selection();
+        add_numbers();
         
     } while (selection !='Q');
-    
     
     
     return 0;
@@ -32,5 +32,16 @@ int main() {
 
 
 void display_menu(){
-    
+    cout<<"P - Print Numbers: " <<endl;
+    cout<<"A - Add Numbers: " <<endl;
+    cout<<"M - Calculate the mean of the numbers: " <<endl;
+    cout<<"S - The smallest number: " <<endl;
+    cout<<"L - The largest number: " <<endl;
+    cout<<"-----------------------" <<endl;
+}
+
+char get_selection(){
+    char c{};
+    cin>>c;
+    return toupper(c);
 }
