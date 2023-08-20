@@ -76,12 +76,13 @@ int main() {
 
 
 void display_menu(){
-    cout<<"P - Print Numbers: " <<endl;
-    cout<<"A - Add Numbers: " <<endl;
-    cout<<"M - Calculate the mean of the numbers: " <<endl;
-    cout<<"S - The smallest number: " <<endl;
-    cout<<"L - The largest number: " <<endl;
-    cout<<"F - Find a number: " <<endl;
+    cout<<"P - Print Numbers" <<endl;
+    cout<<"A - Add Numbers" <<endl;
+    cout<<"M - Calculate the mean of the numbers" <<endl;
+    cout<<"S - The smallest number" <<endl;
+    cout<<"L - The largest number" <<endl;
+    cout<<"F - Find a number" <<endl;
+    cout<<"Q - Quit" <<endl;
     cout<<"-----------------------" <<endl;
     cout<<"Enter your choice: " <<endl;
 }
