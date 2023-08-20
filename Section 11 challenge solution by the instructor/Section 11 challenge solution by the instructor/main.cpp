@@ -23,8 +23,10 @@ double calc_mean(const vector<int> &v);
 void handle_smallest(const vector<int> &v);
 void handle_largest(const vector<int> &v);
 
-void handle_unknown();
+void handle_find(const vector<int> &v);
 
+void handle_unknown();
+void handle_quit();
 
 
 int main() {
@@ -135,6 +137,14 @@ void handle_largest(const vector<int> &v) {
     cout<<"The largest number on the list is: " <<largest;
 }
 
+void handle_find(vector<int> &v) {
+    
+}
+
 void handle_unknown(){
     cout<<"Invalid input please enter again!" <<endl;
+}
+
+void handle_quit() {
+    cout<<"GoodBye :)" <<endl;
 }
