@@ -120,21 +120,30 @@ double calc_mean(const vector<int> &v){
 }
 
 void handle_smallest(const vector<int> &v){
-    int smallest;
-    smallest = v.at(0);
-    for(auto num:v)
-        if (num<smallest)
-            smallest =num;
-    cout<<"The smallest number on the list is: " <<smallest;
+    if (v.size()==0)
+        cout<<"[] - the list is empty! " <<endl;
+    else{
+        int smallest;
+        smallest = v.at(0);
+        for(auto num:v)
+            if (num<smallest)
+                smallest =num;
+        cout<<"The smallest number on the list is: " <<smallest;
+    }
 }
 
 void handle_largest(const vector<int> &v) {
-    int largest{};
-    largest=v.at(0);
-    for(auto num:v)
-        if(num>largest)
-            largest=num;
-    cout<<"The largest number on the list is: " <<largest;
+    
+    if (v.size()==0)
+        cout<<"[] - the list is empty! " <<endl;
+    else{
+        int largest{};
+        largest=v.at(0);
+        for(auto num:v)
+            if(num>largest)
+                largest=num;
+        cout<<"The largest number on the list is: " <<largest;
+    }
 }
 
 void handle_find(vector<int> &v) {
