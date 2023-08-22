@@ -131,7 +131,7 @@ void handle_smallest(const vector<int> &v){
         for(auto num:v)
             if (num<smallest)
                 smallest =num;
-        cout<<"The smallest number on the list is: " <<smallest;
+        cout<<"The smallest number on the list is: " <<smallest <<endl;
     }
 }
 
@@ -145,7 +145,7 @@ void handle_largest(const vector<int> &v) {
         for(auto num:v)
             if(num>largest)
                 largest=num;
-        cout<<"The largest number on the list is: " <<largest;
+        cout<<"The largest number on the list is: " <<largest <<endl;
     }
 }
 
@@ -155,12 +155,12 @@ void handle_find(const vector<int> &v) {
     cin>>matched;
     
     if (find(v, matched))
-        cout<<matched <<"Was found!" <<endl;
+        cout<<matched <<" Was found!" <<endl;
     else
-        cout<<matched <<"Wasn't found!" <<endl;
+        cout<<matched <<" Wasn't found!" <<endl;
 }
 
-bool find(const vector<int> &&v, int matched) {
+bool find(const vector<int> &v, int matched) {
     for (auto num:v)
         if(num==matched)
             return true;
