@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
     score_ptr = &score;
     
     cout<<"Value of score is: " <<score <<endl;
-    cout<<"Sizeof score is: " <<sizeof score <<endl;
+    cout<<"Adress of score is: " <<&score <<endl;
     cout<<"value of score_ptr is:" <<score_ptr <<endl;
     
     
