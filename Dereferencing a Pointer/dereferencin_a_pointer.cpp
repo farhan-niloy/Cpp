@@ -1,40 +1,48 @@
 //
 //  main.cpp
-//  Function
+//  FunctionDefinition
 //
-//  Created by Farhan Niloy on 28/6/23.
+//  Created by Farhan Niloy on 2/8/23.
 //
 
 #include <iostream>
-#include <cmath> //required
-
 using namespace std;
 
-int main (){
-    
-    double num{};
-    
-    cout<<"Enter a number (double): ";
-    cin>>num;
-    
-    cout<<"The sqrt of " <<num <<" is: " <<sqrt(num) <<endl;
-    cout<<"The cubed root of " <<num <<" is: " <<cbrt(num) <<endl;
-    
-    cout<<"The sine of " <<num <<" is: " <<sin(num) <<endl;
-    cout<<"the cosine of " <<num <<" is: " <<cos(num) <<endl;
-    
-    cout<<"The sile of " <<num <<" is: " <<ceil(num) <<endl;
-    cout<<"The floor of " <<num <<" is: " <<floor(num) <<endl;
-    cout<<"The round of " <<num <<" is: " <<round(num) <<endl;
-    
-    double power {};
-    cout<<"Enter a power to raise" << num <<" to:" <<endl;
-    cin>>power;
-    cout<<num <<"raised to the " <<power << " power is: " <<pow(num, power) <<endl;
-    
-    cout<<endl;
- 
+const double pi{3.14159};
 
+double clac_circle(double radius){
+    return pi*radius*radius;
+}
 
+double calc_cylinder_volume(double radius, double height){
+    //return pi*radius*radius*height;
+    return clac_circle(radius)*height;
+}
+
+void circle_area (){
+    double radius{};
+    cout<<"Enter the radius of the circle in double: ";
+    cin>>radius;
+    
+    cout<<"The area of the circle with radius " <<radius <<" is: " <<clac_circle(radius) <<endl;
+}
+
+void volume_cylinder(){
+    double radius{};
+    double height{};
+    
+    cout<<"Enter the radius of the cylinder: ";
+    cin>>radius;
+    
+    cout<<"Enter the height of the cylinder: ";
+    cin>>height;
+    
+    cout<<"The volume of the cylinder with radius " <<radius <<" and height " <<height <<" is: " <<calc_cylinder_volume(radius, height) <<endl;
+    
+}
+
+int main() {
+    circle_area();
+    volume_cylinder();
     return 0;
 }
