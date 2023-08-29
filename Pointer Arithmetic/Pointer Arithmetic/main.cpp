@@ -52,8 +52,21 @@ int main(int argc, const char * argv[]) {
     cout<<*p1 <<" == " <<*p3 <<": " <<(*p1==*p3) <<endl;
     
     
+    cout<<"\n........................." <<endl;
     
-
+    char name[]{"Farhan"};
+    
+    char *c1_ptr{nullptr};
+    char *c2_ptr{nullptr};
+    
+    c1_ptr = &name[0]; //F
+    c2_ptr = &name[3]; //h
+    
+    cout<<"In the string " <<name <<", " <<*c2_ptr <<" is " <<(c2_ptr-c1_ptr) << " character away from " <<*c1_ptr <<endl;
+    
+    cout<<c2_ptr;
+    cout<<c1_ptr;
+    cout<<endl;
     
     
     return 0;
