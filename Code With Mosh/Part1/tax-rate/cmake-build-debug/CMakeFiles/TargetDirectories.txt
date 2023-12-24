@@ -1,0 +1,3 @@
+/Users/farhanniloy/Programming/Cpp/Cpp/Code With Mosh/Part1/tax-rate/cmake-build-debug/CMakeFiles/tax_rate.dir
+/Users/farhanniloy/Programming/Cpp/Cpp/Code With Mosh/Part1/tax-rate/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/farhanniloy/Programming/Cpp/Cpp/Code With Mosh/Part1/tax-rate/cmake-build-debug/CMakeFiles/rebuild_cache.dir
