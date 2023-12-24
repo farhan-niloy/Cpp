@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     int a{15};
     int b{18};
-    int x{0};
+    int x;
 
     x = a;
     a = b;
