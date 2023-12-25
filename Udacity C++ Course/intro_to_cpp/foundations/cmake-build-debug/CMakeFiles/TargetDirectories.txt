@@ -1,0 +1,3 @@
+/Users/farhanniloy/Programming/Cpp/Cpp/Udacity C++ Course/intro_to_cpp/foundations/cmake-build-debug/CMakeFiles/foundations.dir
+/Users/farhanniloy/Programming/Cpp/Cpp/Udacity C++ Course/intro_to_cpp/foundations/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/farhanniloy/Programming/Cpp/Cpp/Udacity C++ Course/intro_to_cpp/foundations/cmake-build-debug/CMakeFiles/rebuild_cache.dir
