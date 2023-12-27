@@ -45,7 +45,7 @@ using std::cout;
 
 int main() 
 {
-    string b("1,2,3");
+    string b("1,2,3,");
 
     istringstream my_stream(b);
 

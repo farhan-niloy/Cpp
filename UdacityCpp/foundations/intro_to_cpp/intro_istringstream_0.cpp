@@ -28,7 +28,7 @@ using std::cout;
 
 int main () 
 {
-    string a("1 2 3");
+    string a{"10 3 4"};
 
     istringstream my_stream(a);
 

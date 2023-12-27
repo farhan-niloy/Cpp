@@ -1,8 +1,12 @@
 # ninja log v5
-0	45	1703668682431811461	build.ninja	3170a5e135b25d7f
-553	595	1703511701652257043	foundations	3475d6f030a4213f
-0	46	1703668682431811461	build.ninja	3170a5e135b25d7f
-0	329	1703668682766093381	CMakeFiles/foundations.dir/intro_enum.cpp.o	50b1b0679e4ded2
-330	375	1703668682813564469	foundations	8bdb2b1ff1b1712c
+339	383	1703670096018278050	foundations	da47934d9faea765
+3	339	1703669746185523350	CMakeFiles/foundations.dir/intro_istringstream_0.cpp.o	f8c723cbdc4b0027
 3	342	1703668887046442713	CMakeFiles/foundations.dir/intro_enum.cpp.o	50b1b0679e4ded2
-342	389	1703668887096977987	foundations	8bdb2b1ff1b1712c
+0	52	1703670180705071444	build.ninja	3170a5e135b25d7f
+3	338	1703669976383846233	CMakeFiles/foundations.dir/intro_istringstream_1.cpp.o	85e16e5da1d77f8d
+0	339	1703670095972946892	CMakeFiles/foundations.dir/intro_istringstream_2.cpp.o	a2cbb0facf810f77
+0	44	1703670180705071444	build.ninja	3170a5e135b25d7f
+0	345	1703670181056336221	CMakeFiles/foundations.dir/istringstream_strings_with_mixed_types.cpp.o	c647f72f22083bbc
+346	389	1703670181101960089	foundations	f0223de4dbd83ac3
+3	340	1703670220094050719	CMakeFiles/foundations.dir/istringstream_strings_with_mixed_types.cpp.o	c647f72f22083bbc
+340	385	1703670220140261299	foundations	f0223de4dbd83ac3

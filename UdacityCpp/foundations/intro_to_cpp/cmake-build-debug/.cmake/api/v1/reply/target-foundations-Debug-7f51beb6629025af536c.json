@@ -91,7 +91,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "intro_enum.cpp",
+			"path" : "istringstream_strings_with_mixed_types.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
