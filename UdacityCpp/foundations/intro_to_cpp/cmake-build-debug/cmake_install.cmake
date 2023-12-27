@@ -1,4 +1,4 @@
-# Install script for directory: /Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/intro_to_cpp/foundations
+# Install script for directory: /Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/foundations/intro_to_cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/intro_to_cpp/foundations/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/foundations/intro_to_cpp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

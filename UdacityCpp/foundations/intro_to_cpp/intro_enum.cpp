@@ -21,13 +21,13 @@ int main()
         cout << "The color of my car is not red." << "\n";
     }
 
+
     /*
         ===== Examle II: Direction enum =====
     */
 
     enum class Direction {kUp, kDown, kLeft, kRight};
-
-    Direction a = Direction::kUp;
+    Direction a = Direction::kLeft;
 
     // Note: for the switch statement, don't forget the "break" command
     switch (a) {

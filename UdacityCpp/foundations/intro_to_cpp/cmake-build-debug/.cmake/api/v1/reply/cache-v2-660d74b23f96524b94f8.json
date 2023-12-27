@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/intro_to_cpp/foundations/cmake-build-debug"
+			"value" : "/Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/foundations/intro_to_cpp/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/intro_to_cpp/foundations/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/foundations/intro_to_cpp/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/intro_to_cpp/foundations"
+			"value" : "/Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/foundations/intro_to_cpp"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1127,7 +1127,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/intro_to_cpp/foundations/cmake-build-debug"
+			"value" : "/Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/foundations/intro_to_cpp/cmake-build-debug"
 		},
 		{
 			"name" : "foundations_IS_TOP_LEVEL",
@@ -1151,7 +1151,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/intro_to_cpp/foundations"
+			"value" : "/Users/farhanniloy/Programming/Cpp/Cpp/UdacityCpp/foundations/intro_to_cpp"
 		}
 	],
 	"kind" : "cache",
