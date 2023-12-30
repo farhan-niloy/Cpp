@@ -1,3 +1,0 @@
-/Users/farhanniloy/Programming/Cpp/Cpp/C++ From Beginer to Beyond/opp/cmake-build-debug/CMakeFiles/opp.dir
-/Users/farhanniloy/Programming/Cpp/Cpp/C++ From Beginer to Beyond/opp/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/farhanniloy/Programming/Cpp/Cpp/C++ From Beginer to Beyond/opp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
