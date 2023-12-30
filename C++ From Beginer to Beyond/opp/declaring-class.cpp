@@ -18,7 +18,23 @@ class Player {
     bool is_dead();
 };
 
+class Account {
+
+    //Attribute
+    string name;
+    double amount;
+
+    //Methods
+    bool deposite(double);
+    bool withdraw(double);
+
+};
+
 int main() {
+
+    Account frank_account;
+    Account gintoki_account;
+
     Player frank;
     Player hero;
 
@@ -26,6 +42,9 @@ int main() {
     Player kagura;
 
     Player players[] {gintoki, kagura};
+    vector<Player> player_vec{frank};
+    player_vec.push_back(gintoki);
+    player_vec.push_back(kagura);
 
     Player *enemy = new Player;
 
