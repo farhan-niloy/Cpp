@@ -1,6 +1,0 @@
-# ninja log v5
-273	312	1703415715560646271	rolling_dice	5e3d2903208b0039
-3	273	1703415715521678217	CMakeFiles/rolling_dice.dir/rolling-dice.cpp.o	bce776fdefb4ea0a
-1	45	1703583072836064231	build.ninja	c0c715667703d846
-3	329	1703583734664314247	CMakeFiles/rolling_dice.dir/rolling-dice.cpp.o	bce776fdefb4ea0a
-330	374	1703583734710778453	rolling_dice	5e3d2903208b0039
