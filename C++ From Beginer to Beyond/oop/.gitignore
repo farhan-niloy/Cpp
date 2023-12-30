@@ -2,6 +2,7 @@
 CMakeFiles/
 cmake-build-debug/
 CMakeCache.txt
+CMakeLists.txt
 CMakeScripts/
 cmake_install.cmake
 *.cmake
