@@ -22,5 +22,13 @@ int main() {
     Player frank;
     Player hero;
 
+    Player gintoki;
+    Player kagura;
+
+    Player players[] {gintoki, kagura};
+
+    Player *enemy = new Player;
+
+    delete enemy;
     return 0;
 }
