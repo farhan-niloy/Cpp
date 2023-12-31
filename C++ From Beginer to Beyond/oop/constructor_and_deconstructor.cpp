@@ -47,7 +47,7 @@ int main(){
     Player *enemy = new Player;
     enemy ->set_name("Katsura");
 
-    player *level_boss = new Player("Level Boss", 1000, 300);
+    Player *level_boss = new Player("Level Boss", 1000, 300);
     (*level_boss).set_name("Level_boss");
 
     delete enemy;
