@@ -4,6 +4,7 @@
 using std::string;
 using std::cout;
 using std::cin;
+using std::endl;
 
 class Account {
 private:
@@ -50,7 +51,7 @@ int main(){
     else
         cout<<"Not Sufficient Fund! " <<endl;
 
-    if(gins_account.deposit(1000))
+    if(gins_account.withdraw(1000))
         cout<<"Withdraw Ok" <<endl;
     else
         cout<<"Not Sufficient Fund! " <<endl;
