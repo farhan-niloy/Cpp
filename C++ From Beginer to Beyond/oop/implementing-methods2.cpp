@@ -1,9 +1,8 @@
 #include <iostream>
-#include <string>
 #include "Account.h"
 
 using std::cout;
-using std::string;
+using std::endl;
 using std::cout;
 
 int main(){
