@@ -21,9 +21,36 @@ public:
     bool withdraw (double amount);
 };
 
-int main(){
+void Account::set_name(string n) { name = n; }
+string Account::get_name() { return name;}
 
-    void Account::set_name(string n) {name = n; }
+bool Account::deposit(double amount) { balance += amount; return true;}
+bool Account::withdraw(double amount) {
+    if(balance-amount > 0){
+        balance -= amount;
+        return true;
+    } else {
+        return false;
+    }
+}
+
+int main(){
+    Account gins_account;
+    gins_account.set_name("Gin");
+    gins_account.set_balance(1000.00);
+
+    if(gins_account.deposit(200.00)){
+        cout<<"Deposit OK" <<endl;
+    } else {
+        cout<<"Deposit Not Allowed!" <<endl;
+    }
+
+    if(gins_account.withdraw(500))
+        cout<<"Withdraw Ok" <<endl;
+    else
+        cout<<"Not Sufficient Fund! " <<endl;
+
+    if
 
     return 0;
 }
