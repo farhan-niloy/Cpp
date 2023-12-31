@@ -40,9 +40,15 @@ int main(){
         Player Sadaharu("Sadaharu");
         Sadaharu.set_name("Sadaharu");
         Player bigsis("Bigsis", 100, 13);
-        bigsis.set_name("bigsis")
+        bigsis.set_name("big sis");
 
     }
+
+    Player *enemy = new Player;
+    enemy ->set_name("Katsura");
+
+    player *level_boss = new Player("Level Boss", 1000, 300);
+    level_boss->set_name("Level_boss");
 
 
     return 0;
