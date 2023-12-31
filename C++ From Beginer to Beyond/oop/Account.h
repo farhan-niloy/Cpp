@@ -1,10 +1,11 @@
-#include <iostream>
+//
+// Created by Niloy Farhan on 31/12/23.
+//
+
+#ifndef OOP_ACCOUNT_H
+#define OOP_ACCOUNT_H
 #include <string>
 
-using std::string;
-using std::cout;
-using std::cin;
-using std::endl;
 
 class Account {
 private:
@@ -35,26 +36,4 @@ bool Account::withdraw(double amount) {
     }
 }
 
-int main(){
-    Account gins_account;
-    gins_account.set_name("Gin");
-    gins_account.set_balance(1000.00);
-
-    if(gins_account.deposit(200.00)){
-        cout<<"Deposit OK" <<endl;
-    } else {
-        cout<<"Deposit Not Allowed!" <<endl;
-    }
-
-    if(gins_account.withdraw(500))
-        cout<<"Withdraw Ok" <<endl;
-    else
-        cout<<"Not Sufficient Fund! " <<endl;
-
-    if(gins_account.withdraw(1000))
-        cout<<"Withdraw Ok" <<endl;
-    else
-        cout<<"Not Sufficient Fund! " <<endl;
-
-    return 0;
-}
+#endif //OOP_ACCOUNT_H
