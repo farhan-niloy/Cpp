@@ -50,7 +50,10 @@ int main(){
     else
         cout<<"Not Sufficient Fund! " <<endl;
 
-    if
+    if(gins_account.deposit(1000))
+        cout<<"Withdraw Ok" <<endl;
+    else
+        cout<<"Not Sufficient Fund! " <<endl;
 
     return 0;
 }
