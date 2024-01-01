@@ -15,14 +15,15 @@ public:
 };
 
 Player::Player()
-    : name{None}, health{0}, xp{0} {
+    :name{None}, health{0}, xp{0} {
 }
 
-Player::Player(std::string string_val) :
-    name{string_val}, health{0}, xp{0}{
+Player::Player(std::string string_val)
+    :name{string_val}, health{0}, xp{0}{
 }
 
-Player::Player(std::string string_val, int int_val, int xp_val) : name{string_val}, {
+Player::Player(std::string string_val, int int_val, int xp_val)
+    :name{string_val}, health{int_val}, xp{xp_val} {
 
 }
 
