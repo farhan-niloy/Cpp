@@ -15,7 +15,9 @@ Player::Player(std::string name_val, int health_val, int xp_val) :name{name_val}
 }
 
 int main() {
-
+    Player empty;
+    Player gin{"Gin"};
+    Player enemy{"katsura", 100, 1000};
 
     return 0;
 }
