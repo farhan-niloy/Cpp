@@ -15,7 +15,7 @@ public:
 };
 
 Player::Player()
-    :name{None}, health{0}, xp{0} {
+    :name{"None"}, health{0}, xp{0} {
 }
 
 Player::Player(std::string string_val)
