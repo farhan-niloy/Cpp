@@ -15,11 +15,14 @@ public:
 };
 
 Player::Player(std::string name_val, int health_val, int xp_val) :name{name_val}, health{health_val}, xp{xp_val} {
-    std::cout<<"Three args constructor created!";
+    std::cout<<"Three args constructor created!" + name;
 }
 
 int main() {
-
+    Player empty();
+    Player gin{"Gintoki", 100};
+    Player sadaharu{"Sadaharu", 100, 1000};
+    Player katsura{"Katsura", 100, 1000};
 
     return 0;
 }
