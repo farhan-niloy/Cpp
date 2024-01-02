@@ -37,8 +37,9 @@ void display (Player p) {
 }
 
 int main() {
-    Player empty();
-    display(empty());
+
+    Player empty;
+    display(empty);
 
     Player gin{"Gintoki", 100};
     display(gin);
