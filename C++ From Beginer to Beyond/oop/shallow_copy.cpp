@@ -39,6 +39,5 @@ int main(){
     Shallow obj1{100};
     display_shallow(obj1);
 
-
     return 0;
 };
