@@ -16,6 +16,7 @@ public:
 
     Move(int d);
     Move( Move &&source) noexcept;
+
     ~Move();
 };
 
@@ -30,9 +31,25 @@ Move::Move(Move &&source) noexcept
     std::cout<<"Move constructor moving resource: " <<*data <<endl;
 }
 
+Move::~Move(){
+    if (data != nullptr){
+        std::cout<<"Destructor freeing data for: " <<*data <<endl;
+    } else {
+        std::cout<<"Destructor freeing data from nullptr" <<endl;
+    }
+}
+
 int main(){
     vector<Move> vec;
-
+    vec.push_back(Move{10});
+    vec.push_back(Move{20});
+    vec.push_back(Move{30});
+    vec.push_back(Move{40});
+    vec.push_back(Move{50});
+    vec.push_back(Move{60});
+    vec.push_back(Move{70});
+    vec.push_back(Move{80});
+    vec.push_back(Move{90});
 
     return 0;
 }
