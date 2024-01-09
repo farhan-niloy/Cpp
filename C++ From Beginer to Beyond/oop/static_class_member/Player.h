@@ -13,7 +13,10 @@ private:
     int health;
     int xp;
 public:
-
+    std::string get_name(){return name;}
+    int get_health(){return health;}
+    int get_xp(){return xp;}
+    //constructor
 };
 
 
