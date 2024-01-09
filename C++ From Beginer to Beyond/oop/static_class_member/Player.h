@@ -9,7 +9,7 @@
 
 class Player{
 private:
-    static int num_player;
+    static int num_players;
     std::string name;
     int health;
     int xp;
@@ -23,7 +23,7 @@ public:
     //destructor
     ~Player();
 
-    static int get_num_player();
+    static int get_num_players();
 };
 
 
