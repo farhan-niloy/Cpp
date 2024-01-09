@@ -20,5 +20,5 @@ Player::~Player(){
 }
 
 int Player::get_num_players() {
-    return num_player;
+    return num_players;
 }
