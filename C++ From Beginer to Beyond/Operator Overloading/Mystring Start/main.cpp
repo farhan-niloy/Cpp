@@ -2,9 +2,9 @@
 #include "Mystring.h"
 
 int main() {
-    Mystring empty;
-    Mystring larry{"Larry"};
-    Mystring stooges{Larry};
+    Mystring empty;               //no arg constructor
+    Mystring larry{"Larry"};   //overloaded constructor
+    Mystring stooges{larry};      //copy constructor
 
     empty.display();
     larry.display();
