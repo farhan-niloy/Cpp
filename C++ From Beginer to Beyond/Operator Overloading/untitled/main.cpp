@@ -8,7 +8,7 @@ int main() {
     Mystring b;                   //no-arg constructor
     b = a;                        //copy assignment
                                   //b.operator=(a)
-    b = "Hello world!";           //b.operator=("Hello world!")
+    b = "Hello world";   //b.operator=("Hello world!")
 
     Mystring empty;               //no-arg constructor
     Mystring larry{"Larry"};   //overloaded constructor
@@ -28,6 +28,17 @@ int main() {
     stooges_vec.push_back("Curly");
 
 
+    std::cout<<"==========Loop1==================" <<std::endl;
+    for(const Mystring &s: stooges_vec)
+        s.display();
+//
+//    std::cout<<"==========Loop1==================" <<std::endl;
+//    for(const Mystring &s: stooges_vec)
+//        s = "Changed";
+
+    std::cout<<"==========Loop1==================" <<std::endl;
+    for(const Mystring &s: stooges_vec)
+        s.display();
 
     return 0;
 }

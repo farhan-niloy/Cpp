@@ -11,7 +11,7 @@ private:
     char *str;
 
 public:
-    Mystring();
+    Mystring(;
     Mystring(const char *s);
     Mystring(const Mystring &source);
     ~Mystring();
