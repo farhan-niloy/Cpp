@@ -7,6 +7,12 @@
 
 
 class Mystring {
+private:
+    char *str;
+
+public:
+    Mystring();
+    Mystring(const char *s);
 
 };
 
