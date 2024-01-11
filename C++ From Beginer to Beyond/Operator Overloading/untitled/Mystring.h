@@ -16,6 +16,8 @@ public:
     Mystring(const Mystring &source);
     ~Mystring();
 
+    Mystring &operator=(const Mystring &rhs);       //copy assignment
+
     void display() const;
     int get_length() const;
     const char *get_str() const;
