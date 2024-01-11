@@ -23,4 +23,25 @@ Mystring::Mystring(const char *s)
     }
 }
 
+//copy constructor
+Mystring::Mystring(const Mystring &source)
+    :str(nullptr) {
+    str = new char[std::strlen(source.str)+1];
+    std::strcpy(str, source.str);
+}
 
+//Destructor
+Mystring::Mystring() {
+    delete [] str;
+}
+
+//Display Method
+void Mystring::display() const{
+    std::cout<<str <<":" <<get_length() <<std::endl;
+}
+
+int Mystring::get_length() const {
+    return std::strlen(str);
+}
+
+const char *Mystring::get_str() {return str;}

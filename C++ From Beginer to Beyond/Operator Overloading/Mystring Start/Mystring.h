@@ -14,7 +14,7 @@ public:
     Mystring();
     Mystring(const char *s);
     Mystring(const Mystring &source);
-    ~Mystring()
+    ~Mystring();
 
     void display() const;
     int get_length() const;
