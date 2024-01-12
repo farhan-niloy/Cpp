@@ -39,6 +39,37 @@ Mystring::~Mystring(){
     delete [] str;
 }
 
+//Copy assignment
+Mystring &Mystring::operator=(const Mystring &rhs){
+    if(this == &rhs)
+        return *this;
+    delete [] str;
+    str = new char[std::strlen(rhs.str)+1];
+    std::strcpy(str, rhs.str);
+    return *this;
+}
+
+//Move assignment operator
+Mystring &Mystring::operator=(Mystring &&rhs){
+    std::cout<<"Using move assignment" <<std::endl;
+    if(this == &rhs)
+        return *this;
+    delete [] str;
+    str = rhs.str;
+    rhs.str = nullptr;
+    return *this;
+}
+
+//Equality
+bool Mystring::operator==(const Mystring &rhs) const {
+    return (std::strcmp(str, rhs.str));
+}
+
+//Make lowercase
+Mystring Mystring::operator-() const {
+    char *buff = new c
+}
+
 //Display method
 void Mystring::display() const {
     std::cout<<str<<" : " <<get_length() <<std::endl;
