@@ -4,9 +4,15 @@
 
 #ifndef OVERLOADING_OPERATOR_AS_MEMBER_FUNCTION_MYSTRING_H
 #define OVERLOADING_OPERATOR_AS_MEMBER_FUNCTION_MYSTRING_H
+#include <iostream>
 
 
-class Mystring{
+class Mystring  {
+
+    friend std::ostream &operator <<(std::ostream &os, const Mystring &rhs);
+    friend std::istream &operator >>(std::istream &in, Mystring &rhs);
+
+
 private:
     char *str;
 

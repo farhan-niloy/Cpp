@@ -98,3 +98,18 @@ int Mystring::get_length() const {return std::strlen(str);}
 //string getter
 const char *Mystring::get_str() const {return str;}
 
+//Overloaded insertion operator
+std::ostream &operator<<(std::ostream &os, const Mystring &rhs) {
+    os << rhs.str;
+    return  os;
+}
+
+//Overloaded extraction operator
+std::istream &operator>>(std::istream &in, Mystring &rhs){
+    char *buff = new char[1000];
+    in >> buff;
+    rhs = Mystring{buff};
+    delete [] buff;
+    return in;
+
+}

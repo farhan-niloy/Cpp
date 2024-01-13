@@ -1,16 +1,21 @@
 #include <iostream>
 #include "Mystring.h"
 
+using namespace std;
+
 int main() {
     Mystring larry{"Larry"};
     Mystring moe{"Moe"};
     Mystring curly;
 
-    std::cout<<"Enter the third stooge's first name: ";
-    std::cin>> curly;
+    cout << "Enter the third stooge's first name: ";
+    cin >> curly;
 
-    std::cout<<"The three stooges are " <<larry <<"," <<curly <<"," <<moe <<std::endl;
+    cout << "Three stooges are " << larry << ", " << curly << ", and " << moe << endl;
 
+    cout<<"Enter three stooges name seperated by space ";
+    cin >> larry >> moe >> curly;
 
+    cout << "Three stooges are " << larry << ", " << moe << ", and " << curly << endl;
     return 0;
 }
