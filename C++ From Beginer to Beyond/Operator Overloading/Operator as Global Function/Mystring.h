@@ -1,0 +1,14 @@
+//
+// Created by Niloy Farhan on 13/1/24.
+//
+
+#ifndef OPERATOR_AS_GLOBAL_FUNCTION_MYSTRING_H
+#define OPERATOR_AS_GLOBAL_FUNCTION_MYSTRING_H
+
+
+class Mystring {
+
+};
+
+
+#endif //OPERATOR_AS_GLOBAL_FUNCTION_MYSTRING_H
