@@ -67,8 +67,25 @@ bool Mystring::operator==(const Mystring &rhs) const {
 
 //Make lowercase
 Mystring Mystring::operator-() const {
-    char *buff = new c
+    char *buff = new char[std::strlen(str)+1];
+    std::strcpy(buff, str);
+    for(size_t i=0; i<std::strlen(buff); i++)
+        buff[i] = std::tolower(buff[i]);
+    Mystring temp {buff};
+    delete [] buff;
+    return buff;
 }
+
+//Concatenate
+Mystring Mystring::operator+(const Mystring &rhs) const {
+    char *buff = new char[std::strlen(str) + std::strlen(rhs.str) +1];
+    std::strcpy(buff, str);
+    std::strcat(buff, rhs.str);
+    Mystring temp{buff};
+    delete [] buff;
+    return temp;
+}
+
 
 //Display method
 void Mystring::display() const {
