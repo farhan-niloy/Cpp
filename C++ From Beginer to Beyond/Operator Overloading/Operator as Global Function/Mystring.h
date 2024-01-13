@@ -25,10 +25,6 @@ public:
     Mystring &operator=(const Mystring &rhs);       //Copy assignment
     Mystring &operator=(Mystring &&rhs);        //Move assignment
 
-    Mystring operator-() const;     //Make lowercase
-    Mystring operator+(const Mystring &rhs) const;      //Concatenate
-    bool operator==(const Mystring &rhs) const;     //Compare
-
     void display() const;
 
     int get_length() const;
