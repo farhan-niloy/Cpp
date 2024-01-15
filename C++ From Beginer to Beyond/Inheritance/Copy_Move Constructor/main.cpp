@@ -15,6 +15,14 @@ public:
         :value{x}{
         cout<<"int Base constructor" <<endl;
     }
+    Base(const Base &other)
+        :value{other.value}{
+        cout<<"Base copy constructor" <<endl;
+    }
+
+    Base &operator=(const Base &rhs){
+
+    }
 };
 
 class Derived{
