@@ -32,10 +32,28 @@ public:
 };
 
 class Derived:public Base {
-
+private:
+    int doubled_value;
+public:
+    Derived()
+        :Base{}{
+            cout<<"Derived no-args constructor" <<endl;
+    }
+    Derived(int x)
+        :Base{x}, doubled_value{x*2}{
+        cout<<"int Derived constructor" <<endl;
+    }
+    Derived(const Derived &other)
+        :Base{other}, doubled_value{other.doubled_value}{
+        cout<<"Derived copy constructor" <<endl;
+    }
 };
 
 int main() {
+
+    Derived d{100};
+    Derived d1{d};
+    d = d1;
 
     return 0;
 }
