@@ -5,7 +5,8 @@
 #include "Savings_Account.h"
 #include <iostream>
 
-Savings_Account::Savings_Account() {
+Savings_Account::Savings_Account()
+    :int_rate{3.00}{
 
 }
 
