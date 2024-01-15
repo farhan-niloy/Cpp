@@ -29,7 +29,7 @@ public:
 };
 
 int main() {
-
-
+    Derived d;
+    Derived c{200};
     return 0;
 }
