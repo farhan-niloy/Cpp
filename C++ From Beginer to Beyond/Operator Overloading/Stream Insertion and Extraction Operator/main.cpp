@@ -7,6 +7,7 @@ int main() {
     Mystring larry{"Larry"};
     Mystring moe{"Moe"};
     Mystring curly;
+    Mystring hello;
 
     cout << "Enter the third stooge's first name: ";
     cin >> curly;
