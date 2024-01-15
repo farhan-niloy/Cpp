@@ -21,11 +21,17 @@ public:
     }
 
     Base &operator=(const Base &rhs){
-
+    cout<<"Base operator="<<endl;
+    if(this == &rhs)
+        return *this;
+    value = rhs.value;
+    return *this;
     }
+
+    ~Base(){cout<<"Base destructor"<<endl;};
 };
 
-class Derived{
+class Derived:public Base {
 
 };
 
