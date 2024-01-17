@@ -2,27 +2,34 @@
 
 class Account{
 public:
-    void withdraw(double amount){
+   virtual void withdraw(double amount){
         std::cout<<"In Account::Withdraw" <<std::endl;
     }
+    virtual ~Account() {std::cout<<"Account Destructor" <<std::endl;};
 };
 
 class Checking:public Account{
-    void withdraw(double amount){
+public:
+   virtual void withdraw(double amount){
         std::cout<<"In Checking::Withdraw" <<std::endl;
     }
+    virtual ~Checking() {std::cout<<"Account Destructor" <<std::endl;};
 };
 
 class Savings:public Account{
-    void withdraw(double amount){
+public:
+  virtual void withdraw(double amount){
         std::cout<<"In Savings::Withdraw" <<std::endl;
     }
+    virtual ~Savings() {std::cout<<"Account Destructor" <<std::endl;};
 };
 
 class Trust: public Account{
-    void withdraw(double amount){
+public:
+    virtual void withdraw(double amount){
         std::cout<<"In Trust::Withdraw" <<std::endl;
     }
+    virtual ~Trust() {std::cout<<"Account Destructor" <<std::endl;};
 };
 
 int main() {
