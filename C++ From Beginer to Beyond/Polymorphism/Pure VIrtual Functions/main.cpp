@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 class Shape{    //Abstract Base Class
 public:
@@ -55,10 +56,15 @@ int main() {
 //    Shape *p = new Shpae();
 
 
-      Shape *ptr = new Circle();
-      ptr-> draw();
-      ptr->rotate();
+//      Shape *ptr = new Circle();
+//      ptr->draw();
+//      ptr->rotate();
 
+    Shape *s1 = new Circle();
+    Shape *s2 = new Line();
+    Shape *s3 = new Square();
+
+    std::vector<Shape *> shapes {s1,s2,s3};
 
     return 0;
 }
