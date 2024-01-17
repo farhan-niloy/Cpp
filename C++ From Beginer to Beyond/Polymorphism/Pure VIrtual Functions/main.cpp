@@ -50,6 +50,12 @@ public:
     virtual ~Square(){}
 };
 
+void screen_refresh(std::vector<Shape *> &shapes){
+    std::cout<<"Refreshing" <<std::endl;
+    for(auto s: shapes)
+        (*s).draw();
+}
+
 
 int main() {
 //    Shape s;
@@ -65,6 +71,11 @@ int main() {
     Shape *s3 = new Square();
 
     std::vector<Shape *> shapes {s1,s2,s3};
+    screen_refresh(shapes);
+
+    delete s1;
+    delete s2;
+    delete s3;
 
     return 0;
 }
