@@ -10,7 +10,7 @@ public:
 
 class Derived:public Base{
 public:
-    virtual void say_hello(){
+    virtual void say_hello() const override{ //forgot const? no problem use override
         std::cout<<"Hello - I'm a Derived class object" <<std::endl;
     }
     virtual ~Derived(){std::cout<<"Destructor Derived" <<std::endl;}
