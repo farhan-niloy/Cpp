@@ -47,6 +47,16 @@ public:
         :Base{other}, doubled_value{other.doubled_value}{
         cout<<"Derived copy constructor" <<endl;
     }
+    Derived &operator=(const Derived &rhs){
+        cout<<"Derived operator=" <<endl;
+        if(this == &rhs)
+            return *this;
+        Base::operator=(rhs);
+        doubled_value = rhs.doubled_value;
+        return *this;
+    }
+
+    ~Derived() {cout<<"Derived destructor" <<endl;};
 };
 
 int main() {
