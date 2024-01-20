@@ -25,7 +25,7 @@ public:
 class Checking: public Account{
 public:
     virtual void withdraw(double amount){
-        std::cout<<"In Checking::withdraw" <<std::endl;
+        std::cout<<"In Checking::withdraw" <<std::endl;git pus
     }
     virtual void print(std::ostream &os) const {
         os<<"Checking display";
