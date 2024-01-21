@@ -20,6 +20,9 @@ int main() {
         miles_per_gallon = calculate_mpg(miles, gallons);
         std::cout<<"Result: " <<miles_per_gallon;
     }
+    catch (int &ex){
+        std::cerr<<"Divide by 0 err" <<std::endl;
+    }
 
     return 0;
 }
