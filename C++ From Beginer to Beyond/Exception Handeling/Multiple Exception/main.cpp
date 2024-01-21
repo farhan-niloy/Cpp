@@ -4,6 +4,8 @@
 double calculate_mpg(int miles, int gallons){
     if (gallons == 0)
         throw 0;
+    if (miles < 0 || gallons < 0)
+        throw std::string{"Negative Value"};
     return static_cast<double>(miles)/gallons;
 }
 
@@ -23,6 +25,9 @@ int main() {
     }
     catch (int &ex){
         std::cerr<<"Divide by 0 err" <<std::endl;
+    }
+    catch (std::string &ex){
+        std::cerr<<ex <<std::endl;
     }
 
     return 0;
