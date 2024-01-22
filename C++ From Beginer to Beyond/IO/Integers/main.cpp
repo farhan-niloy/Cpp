@@ -41,7 +41,9 @@ int main() {
     std::cout<<"Hexadecimal     :" <<std::hex <<num <<std::endl;
     std::cout<<"Hexadecimal     :" <<std::hex <<std::nouppercase <<num <<std::endl;
 
-
+    std::cout<<"Octal           :" <<std::oct <<num <<std::endl;
+    std::cout<<"Hexadecimal     :" <<std::hex <<std::showbase <<std::endl;
+    std::cout<<"Octal           :" <<std::oct <<num <<std::endl;
 
     return 0;
 }
