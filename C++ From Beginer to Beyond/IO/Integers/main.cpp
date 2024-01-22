@@ -13,5 +13,17 @@ int main() {
     std::cout<<std::oct <<num <<std::endl;
     std::cout<<std::hex <<num <<std::endl;
 
+    std::cout<<"\n-----------------------------------------\n";
+    std::cout<<std::uppercase <<std::showbase;
+    std::cout<<std::dec <<num <<std::endl;
+
+    std::cout<<"\n-----------------------------------------\n";
+    std::cout<<std::showpos;
+    std::cout<<std::dec <<num <<std::endl;
+    std::cout<<std::oct <<num <<std::endl;
+    std::cout<<std::hex <<num <<std::endl;
+
+
+
     return 0;
 }
