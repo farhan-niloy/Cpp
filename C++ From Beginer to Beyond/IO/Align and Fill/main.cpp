@@ -31,14 +31,23 @@ int main() {
              <<hello
              <<std::endl;
 
-    std::cout<<"--Width 10 for num1------------------------------------------" <<std::endl;
+    std::cout<<"\n--Width 10 for num1------------------------------------------" <<std::endl;
     ruller();
     std::cout<<std::setw(10) <<num1
              <<std::setw(10) <<num2
              <<std::setw(10) <<hello
              <<std::endl;
 
-    std::cout<<"--Width 10 for num1------------------------------------------" <<std::endl;
+    std::cout<<"\n--Width 10 for all------------------------------------------" <<std::endl;
+    ruller();
+    std::cout<<std::setw(10) <<std::left <<num1
+             <<std::setw(10) <<std::left <<num2
+             <<std::setw(10) <<std::left <<hello
+             <<std::endl;
+
+
+    std::cout<<std::setfill('-');
+    std::cout<<"\n--Width with dash------------------------------------------" <<std::endl;
     ruller();
     std::cout<<std::setw(10) <<std::left <<num1
              <<std::setw(10) <<std::left <<num2
