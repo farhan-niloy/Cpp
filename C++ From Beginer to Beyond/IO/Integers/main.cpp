@@ -23,6 +23,10 @@ int main() {
     std::cout<<std::oct <<num <<std::endl;
     std::cout<<std::hex <<num <<std::endl;
 
+    std::cout.setf(std::ios::showbase);
+    std::cout.setf(std::ios::showpos);
+    std::cout.setf(std::ios::uppercase);
+
 
 
     return 0;
