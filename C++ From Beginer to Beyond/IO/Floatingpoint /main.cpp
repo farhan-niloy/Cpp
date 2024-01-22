@@ -30,5 +30,14 @@ int main() {
     std::cout<<num2 <<std::endl;
     std::cout<<num3 <<std::endl;
 
+    std::cout.unsetf(std::ios::scientific | std::ios::fixed);
+    std::cout <<std::resetiosflags(std::ios::showpos);
+
+    std::cout<<"--Fixed----------------------------" <<std::endl;
+    std::cout <<std::setprecision(10) <<std::showpoint;
+    std::cout<<num1 <<std::endl;
+    std::cout<<num2 <<std::endl;
+    std::cout<<num3 <<std::endl;
+
     return 0;
 }
