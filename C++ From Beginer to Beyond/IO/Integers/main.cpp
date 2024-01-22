@@ -27,7 +27,9 @@ int main() {
     std::cout.setf(std::ios::showpos);
     std::cout.setf(std::ios::uppercase);
 
-
+    std::cout<<std::resetiosflags(std::ios::showbase);
+    std::cout<<std::resetiosflags(std::ios::showpos);
+    std::cout<<std::resetiosflags(std::ios::uppercase);
 
     return 0;
 }
