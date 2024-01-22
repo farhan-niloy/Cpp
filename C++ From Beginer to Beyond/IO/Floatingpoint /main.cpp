@@ -18,5 +18,11 @@ int main() {
     std::cout<<num2 <<std::endl;
     std::cout<<num3 <<std::endl;
 
+    std::cout<<"--Fixed----------------------------" <<std::endl;
+    std::cout <<std::setprecision(3) <<std::fixed;
+    std::cout<<num1 <<std::endl;
+    std::cout<<num2 <<std::endl;
+    std::cout<<num3 <<std::endl;
+
     return 0;
 }
