@@ -35,14 +35,14 @@ int main() {
     std::cout<<"Enter an integer: ";
     std::cin>>num;
 
-    std::cout<<std::showbase;
-    std::cout<<"Decimal default :" <<num <<std::endl;
+
+    std::cout<<"Decimal default :" <<std::dec <<num <<std::endl;
     std::cout<<"Hexadecimal     :" <<std::hex <<num <<std::endl;
     std::cout<<"Hexadecimal     :" <<std::hex <<num <<std::endl;
     std::cout<<"Hexadecimal     :" <<std::hex <<std::nouppercase <<num <<std::endl;
 
     std::cout<<"Octal           :" <<std::oct <<num <<std::endl;
-    std::cout<<"Hexadecimal     :" <<std::hex <<std::showbase <<std::endl;
+    std::cout<<"Hexadecimal     :" <<std::hex <<std::showbase <<num <<std::endl;
     std::cout<<"Octal           :" <<std::oct <<num <<std::endl;
 
     return 0;
