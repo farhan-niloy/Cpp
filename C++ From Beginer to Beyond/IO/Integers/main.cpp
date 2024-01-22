@@ -31,5 +31,17 @@ int main() {
     std::cout<<std::resetiosflags(std::ios::showpos);
     std::cout<<std::resetiosflags(std::ios::uppercase);
 
+    std::cout<<"\n-----------------------------------------\n";
+    std::cout<<"Enter an integer: ";
+    std::cin>>num;
+
+    std::cout<<std::showbase;
+    std::cout<<"Decimal default :" <<num <<std::endl;
+    std::cout<<"Hexadecimal     :" <<std::hex <<num <<std::endl;
+    std::cout<<"Hexadecimal     :" <<std::hex <<num <<std::endl;
+    std::cout<<"Hexadecimal     :" <<std::hex <<std::nouppercase <<num <<std::endl;
+
+
+
     return 0;
 }
