@@ -4,6 +4,8 @@
 int main() {
     std::string line;
     std::ifstream in_file;
+    int num;
+    double total;
 
     in_file.open("../test.txt");
     if(!in_file){
@@ -11,9 +13,10 @@ int main() {
         return 1;
     }
 
-    std::cout<<"File is good to go" <<std::endl;
-
-    in_file >> line;
+    in_file >> line >>num >>total;
     std::cout<<line <<std::endl;
+    std::cout<<num <<std::endl;
+    std::cout<<total <<std::endl;
+    in_file.close();
     return 0;
 }
