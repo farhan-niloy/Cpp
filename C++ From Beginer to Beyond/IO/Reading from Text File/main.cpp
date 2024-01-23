@@ -13,8 +13,8 @@ int main() {
         std::cerr<<"Problem opening file" <<std::endl;
         return 1;
     }
-    while(!in_file.eof()){
-        in_file>>line>>num>>total;
+    while(in_file>>line>>num>>total){
+
         std::cout <<std::setw(10) <<std::left <<line
          <<std::setw(10) <<num
          <<std::setw(10) <<total
