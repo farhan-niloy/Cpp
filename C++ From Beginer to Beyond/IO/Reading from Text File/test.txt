@@ -1,0 +1,1 @@
+I am trying to write a script which will use echo and write/append to a file. But I have   in syntax already in strings .. say ..
