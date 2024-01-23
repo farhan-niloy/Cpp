@@ -42,6 +42,8 @@ int main() {
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
     } while (!done);
 
+    std::cout<<"You entered the integer: " <<value <<std::endl;
+
 
     return 0;
 }
