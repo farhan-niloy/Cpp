@@ -1,4 +1,3 @@
-I am trying to write a script which will use echo and write/append to a file. But I have   in syntax already in strings .. say ..
-1111
-
-1234.42
+Larry 11111  234.42
+Moe   1234   333.42
+Curly 48484  33.44
