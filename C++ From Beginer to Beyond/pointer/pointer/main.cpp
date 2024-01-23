@@ -19,6 +19,7 @@ int main(int argc, const char * argv[]) {
     int i{5};
     while (i>0){
         cout<<i<<endl;
+        
         i--;
         
     }
