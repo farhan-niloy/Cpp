@@ -24,5 +24,24 @@ int main() {
                     <<std::setw(5) <<total <<std::endl;
     std::cout<<os.str() <<std::endl;
 
+    std::cout<<"\n---------Data Validation---------------------------------------" <<std::endl;
+
+    int value{};
+    std::string entry{};
+    bool done = false;
+
+    do {
+        std::cout<<"Please enter an integer: ";
+        std::cin>>entry;
+        std::istringstream validator{entry};
+        if(validator >> value)
+            done = true;
+        else
+            std::cout<<"Sorry that's not an integer" <<std::endl;
+        //discards the input buffer
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+    } while (!done);
+
+
     return 0;
 }
