@@ -49,6 +49,26 @@ vector<vector<State>> ReadBoardFile(string path) {
 /**
  * Compare the F values of two cells.
  */
+bool Compare(const vector<int> a, const vector<int> b) {
+    // Calculate the sum of the third and fourth elements for vector 'a'
+    int f1 = a[2] + a[3]; // f1 = g1 + h1
+
+    // Calculate the sum of the third and fourth elements for vector 'b'
+    int f2 = b[2] + b[3]; // f2 = g2 + h2
+
+    // Compare the calculated values and return the result
+    return f1 > f2;
+}
+
+
+/**
+ * Sort the two-dimensional vector of ints in descending order.
+ */
+ void CellSort(vector<vector<int>> *v) {
+     sort(v->begin(), v->end(), Compare);
+ }
+
+ //Calculate the manhattan distance
 
 
 
