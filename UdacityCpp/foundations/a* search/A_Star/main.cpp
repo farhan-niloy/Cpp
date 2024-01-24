@@ -1,4 +1,4 @@
-#include <algorithm>
+#include <algorithm>  // for sort
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -18,6 +18,7 @@ enum class State {kEmpty, kObstacle, kClosed, kPath, kStart, kFinish};
 // directional deltas
 const int delta[4][2]{{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
 
+
 vector<State> ParseLine(string line) {
     istringstream sline(line);
     int n;
@@ -33,12 +34,13 @@ vector<State> ParseLine(string line) {
     return row;
 }
 
+
 vector<vector<State>> ReadBoardFile(string path) {
-    ifstream file (path);
+    ifstream myfile (path);
     vector<vector<State>> board{};
-    if (file) {
+    if (myfile) {
         string line;
-        while (getline(file, line)) {
+        while (getline(myfile, line)) {
             vector<State> row = ParseLine(line);
             board.push_back(row);
         }
@@ -46,17 +48,13 @@ vector<vector<State>> ReadBoardFile(string path) {
     return board;
 }
 
+
 /**
  * Compare the F values of two cells.
  */
 bool Compare(const vector<int> a, const vector<int> b) {
-    // Calculate the sum of the third and fourth elements for vector 'a'
     int f1 = a[2] + a[3]; // f1 = g1 + h1
-
-    // Calculate the sum of the third and fourth elements for vector 'b'
     int f2 = b[2] + b[3]; // f2 = g2 + h2
-
-    // Compare the calculated values and return the result
     return f1 > f2;
 }
 
@@ -64,15 +62,59 @@ bool Compare(const vector<int> a, const vector<int> b) {
 /**
  * Sort the two-dimensional vector of ints in descending order.
  */
- void CellSort(vector<vector<int>> *v) {
-     sort(v->begin(), v->end(), Compare);
- }
-
- //Calculate the manhattan distance
+void CellSort(vector<vector<int>> *v) {
+    sort(v->begin(), v->end(), Compare);
+}
 
 
+// Calculate the manhattan distance
+int Heuristic(int x1, int y1, int x2, int y2) {
+    return abs(x2 - x1) + abs(y2 - y1);
+}
 
-int main() {
 
-    return 0;
+/**
+ * Check that a cell is valid: on the grid, not an obstacle, and clear.
+ */
+bool CheckValidCell(int x, int y, vector<vector<State>> &grid) {
+    bool on_grid_x = (x >= 0 && x < grid.size());
+    bool on_grid_y = (y >= 0 && y < grid[0].size());
+    if (on_grid_x && on_grid_y)
+        return grid[x][y] == State::kEmpty;
+    return false;
+}
+
+
+/**
+ * Add a node to the open list and mark it as open.
+ */
+void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openlist, vector<vector<State>> &grid) {
+    // Add node to open vector, and mark grid cell as closed.
+    openlist.push_back(vector<int>{x, y, g, h});
+    grid[x][y] = State::kClosed;
+}
+
+
+/**
+ * Expand current nodes's neighbors and add them to the open list.
+ */
+void ExpandNeighbors(const vector<int> &current, int goal[2], vector<vector<int>> &openlist, vector<vector<State>> &grid) {
+    // Get current node's data.
+    int x = current[0];
+    int y = current[1];
+    int g = current[2];
+
+    // Loop through current node's potential neighbors.
+    for (int i = 0; i < 4; i++) {
+        int x2 = x + delta[i][0];
+        int y2 = y + delta[i][1];
+
+        // Check that the potential neighbor's x2 and y2 values are on the grid and not closed.
+        if (CheckValidCell(x2, y2, grid)) {
+            // Increment g value and add neighbor to open list.
+            int g2 = g + 1;
+            int h2 = Heuristic(x2, y2, goal[0], goal[1]);
+            AddToOpen(x2, y2, g2, h2, openlist, grid);
+        }
+    }
 }
