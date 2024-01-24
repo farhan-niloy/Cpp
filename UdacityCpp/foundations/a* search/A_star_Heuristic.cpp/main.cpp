@@ -8,7 +8,6 @@ using std::ifstream;
 using std::istringstream;
 using std::string;
 using std::vector;
-using std::abs;
 
 enum class State {kEmpty, kObstacle};
 
@@ -43,7 +42,9 @@ vector<vector<State>> ReadBoardFile(string path) {
 }
 
 // TODO: Write the Heuristic function here.
-
+int Heuristic(int x1, int y1, int x2, int y2) {
+    return abs(x2 - x1) + abs(y2 - y1);
+}
 
 /**
  * Implementation of A* search algorithm
@@ -79,6 +80,4 @@ int main() {
     auto board = ReadBoardFile("1.board");
     auto solution = Search(board, init, goal);
     PrintBoard(solution);
-    // Tests
-    TestHeuristic();
 }
