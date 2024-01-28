@@ -32,7 +32,27 @@ void display(const std::vector<int> &vec){
 
 }
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+void test2() {
+    std::cout<<"\n============================================\n";
+
+    std::vector<int> num1 {1,2,3,4,5};
+
+    std::vector<int>::iterator  it = num1.begin();
+    while (it != num1.end()){
+        std::cout<<*it <<std::endl;
+        it++;
+    }
+
+    it = num1.begin();
+    while (it != num1.end()){
+        *it = 0;
+        it++;
+    }
+    display(num1);
+}
+
+int main()
+{
+//    test1();
+      test2();
 }
