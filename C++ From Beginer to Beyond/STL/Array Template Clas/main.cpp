@@ -16,7 +16,24 @@ private:
 
         return os;
     }
+public:
+    Array() = default;
+    Array(int int_val) {
+        for (auto &item: values)
+            item = int_val;
+    }
+    void fill(int val) {
+        for ( auto &item: values )
+            item = val;
+    }
+    int get_size() const {
+        return size;
+    }
+    int &operator[](int index) {
+        return values[index];
+    }
 };
+
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
