@@ -31,4 +31,10 @@ int main() {
     std::cout<<min(2,3)<<std::endl;
     std::cout<<min('A', 'B')<<std::endl;
     std::cout<<min(2+5*8,30+7)<<std::endl;
+
+    func<int, int>(10,20);
+    func<char, double>('C', 12.4);
+    func('A',2.0);
+    func(1000,"Testing");
+    func(2000,std::string{"Farnk"});
 }
