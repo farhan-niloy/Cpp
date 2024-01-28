@@ -25,6 +25,7 @@ int main() {
     Person p2 {"Moe", 30};
 
     Person p3 = min(p1, p2);
+    std::cout<<p3.name <<" is younger" <<std::endl;
 
     std::cout<<min<int>(2,3)<<std::endl;
     std::cout<<min(2,3)<<std::endl;
