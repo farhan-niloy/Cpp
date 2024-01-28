@@ -16,6 +16,20 @@ void display(const std::vector<int> &vec){
     std::cout<<"\n============================================\n";
     std::vector<int> num1 {1,2,3,4,5};
     auto it = num1.begin();
+    std::cout <<*it <<std::endl;
+
+    it++;
+    std::cout <<*it <<std::endl;
+
+    it += 2;
+    std::cout <<*it <<std::endl;
+
+    it -= 2;
+    std::cout <<*it <<std::endl;
+
+    it = num1.end() - 1;
+    std::cout <<*it <<std::endl;
+
 }
 
 int main() {
