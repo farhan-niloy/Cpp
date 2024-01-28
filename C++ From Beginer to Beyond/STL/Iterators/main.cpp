@@ -70,6 +70,16 @@ void test3(){
 
 void test4(){
 
+std::vector<int> vec{1,2,3,4,5};
+
+auto t1 = vec.rbegin(); //reverse iterator oer vector
+while(t1 != vec.rend()){
+    std::cout <<*t1 <<std::endl;
+    t1++;
+}
+
+
+
 }
 
 
