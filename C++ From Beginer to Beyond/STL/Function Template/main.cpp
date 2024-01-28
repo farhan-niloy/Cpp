@@ -20,12 +20,19 @@ struct Person {
     }
 };
 
+std::ostream &operator <<(std::ostream &os, const Person &p){
+    os <<p.name;
+    return os;
+}
+
 int main() {
     Person p1 {"Curly", 50};
     Person p2 {"Moe", 30};
+    func(p1, p2);
 
     Person p3 = min(p1, p2);
     std::cout<<p3.name <<" is younger" <<std::endl;
+
 
     std::cout<<min<int>(2,3)<<std::endl;
     std::cout<<min(2,3)<<std::endl;
@@ -36,5 +43,5 @@ int main() {
     func<char, double>('C', 12.4);
     func('A',2.0);
     func(1000,"Testing");
-    func(2000,std::string{"Farnk"});
+    func(2000,std::string{"Farhan"});
 }
