@@ -68,20 +68,39 @@ void test3(){
     }
 }
 
-void test4(){
+void test4() {
 
-std::vector<int> vec{1,2,3,4,5};
+    std::vector<int> vec{1, 2, 3, 4, 5};
 
-auto t1 = vec.rbegin(); //reverse iterator oer vector
-while(t1 != vec.rend()){
-    std::cout <<*t1 <<std::endl;
-    t1++;
+    auto t1 = vec.rbegin(); //reverse iterator oer vector
+    while (t1 != vec.rend()) {
+        std::cout << *t1 << std::endl;
+        t1++;
+    }
+
+//const reverse iterator over a list
+    std::list<std::string> name{"Larry", "Moe", "Curly"};
+    auto it2 = name.crbegin(); //iterator over a list of string cr = constant reverse iterator
+    std::cout << *it2 << std::endl;
+    it2++;
+    std::cout << *it2 << std::endl;
+
+
+
+//iterator over map
+    std::map<std::string, std::string> favorites{
+            {"Farhan", "C++"},
+            {"Gin",    "Tama"},
+            {"Hello",  "World"}
+    };
+
+    auto it3 = favorites.begin();
+    while (it3 != favorites.end()) {
+        std::cout << it3->first << " : " << it3->second << std::endl;
+        it3++;
+    }
+
 }
-
-
-
-}
-
 
 int main()
 {
