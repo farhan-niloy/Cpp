@@ -35,7 +35,7 @@ int main() {
               <<item3.get_value().get_name()
               <<item3.get_value().get_value() <<std::endl;
 
-    std::cout<<"\n=============================================================\n";
+    std::cout<<"\n=============================================================\n\n";
     std::vector<Item<double>> vec{};
     vec.push_back(Item<double>{"Larry", 100.0});
     vec.push_back(Item<double>{"Moe", 200.0});
@@ -44,6 +44,12 @@ int main() {
     for(const auto &item: vec){
         std::cout<< item.get_name() <<" " <<item.get_value() <<std::endl;
     }
+
+    My_Pair <std::string, int> p1 {"Frank", 100};
+    My_Pair <int, double> p2 {123, 14.6};
+
+    std::cout<<p1.first <<", " <<p1.second;
+    std::cout<<p2.first <<", " <<p2.second;
 
     return 0;
 }
