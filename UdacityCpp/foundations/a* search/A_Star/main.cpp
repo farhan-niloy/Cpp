@@ -153,4 +153,39 @@ vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2
         }
 
         // If we're not done, expand search to current node's neighbors.
-        ExpandNeighbors
+        ExpandNeighbors(current, goal, open, grid);
+    }
+
+    // We've run out of new nodes to explore and haven't found a path.
+    cout << "No path found!" << "\n";
+    return std::vector<vector<State>>{};
+}
+
+
+string CellString(State cell) {
+    switch(cell) {
+        case State::kObstacle: return "⛰   ";
+        case State::kPath: return "🚗   ";
+        case State::kStart: return "🚦   ";
+        case State::kFinish: return "🏁   ";
+        default: return "0   ";
+    }
+}
+
+
+void PrintBoard(const vector<vector<State>> board) {
+    for (int i = 0; i < board.size(); i++) {
+        for (int j = 0; j < board[i].size(); j++) {
+            cout << CellString(board[i][j]);
+        }
+        cout << "\n";
+    }
+}
+
+int main() {
+    int init[2]{0, 0};
+    int goal[2]{4, 5};
+    auto board = ReadBoardFile("../1.board");
+    auto solution = Search(board, init, goal);
+    PrintBoard(solution);
+}
