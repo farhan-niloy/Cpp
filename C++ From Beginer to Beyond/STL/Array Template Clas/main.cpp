@@ -5,7 +5,7 @@ template <int N>
 class Array {
 private:
     int size{N};
-    int values{N};
+    int values[N];
 
     friend std::ostream &operator<<(std::ostream &os, const Array<N> &arr) {
         os << "[ ";
