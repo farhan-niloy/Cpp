@@ -25,6 +25,13 @@ std::ostream &operator <<(std::ostream &os, const Person &p){
     return os;
 }
 
+template <typename T>
+void my_swap (T &a, T &b){
+    T temp = a;
+    a = b;
+    b = temp;
+}
+
 int main() {
     Person p1 {"Curly", 50};
     Person p2 {"Moe", 30};
@@ -44,4 +51,11 @@ int main() {
     func('A',2.0);
     func(1000,"Testing");
     func(2000,std::string{"Farhan"});
+
+    int x{100};
+    int y{200};
+
+    std::cout <<x <<", " <<y <<std::endl;
+    my_swap(x, y);
+    std::cout<<x <<", " <<y <<std::endl;
 }
