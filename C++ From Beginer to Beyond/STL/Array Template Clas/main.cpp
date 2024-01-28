@@ -1,13 +1,13 @@
 #include <iostream>
 #include <string>
 
-template <int N>
+template <typename T, int N>
 class Array {
 private:
     int size{N};
-    int values[N];
+    T values[N];
 
-    friend std::ostream &operator<<(std::ostream &os, const Array<N> &arr) {
+    friend std::ostream &operator<<(std::ostream &os, const Array<T,N> &arr) {
         os << "[ ";
         for(const auto &val: arr.values){
             os <<val <<" ";
@@ -18,25 +18,25 @@ private:
     }
 public:
     Array() = default;
-    Array(int int_val) {
+    Array(T int_val) {
         for (auto &item: values)
             item = int_val;
     }
-    void fill(int val) {
+    void fill(T val) {
         for ( auto &item: values )
             item = val;
     }
     int get_size() const {
         return size;
     }
-    int &operator[](int index) {
+    T &operator[](int index) {
         return values[index];
     }
 };
 
 
 int main() {
-    Array<5> nums;
+    Array<int, 5> nums;
     std::cout <<"The size of nums is: " <<nums.get_size() <<std::endl;
     std::cout <<nums <<std::endl;
 
@@ -50,7 +50,7 @@ int main() {
     nums[3] = 2000;
     std::cout <<nums <<std::endl;
 
-    Array<100> nums2 {1};
+    Array<double, 100> nums2 {20.4};
     std::cout<<"This size of nums2 is: " <<nums2.get_size() <<std::endl;
     std::cout <<nums2 <<std::endl;
 }
