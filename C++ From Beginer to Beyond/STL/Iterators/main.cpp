@@ -99,14 +99,26 @@ void test4() {
         std::cout << it3->first << " : " << it3->second << std::endl;
         it3++;
     }
-
 }
+
+void test5() {
+    std::vector<int> vec {1,2,3,4,5,6,7,8,9,10};
+    auto start = vec.begin() + 2;
+    auto finish = vec.end() -3;
+
+    while(start != finish) {
+        std::cout <<*start <<std::endl;
+        start++;
+    }
+}
+
 
 int main()
 {
 //    test1();
 //    test2();
 //    test3();
-      test4();
+//    test4();
+      test5();
 
 }
