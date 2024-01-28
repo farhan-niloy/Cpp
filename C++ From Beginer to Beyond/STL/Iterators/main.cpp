@@ -51,8 +51,33 @@ void test2() {
     display(num1);
 }
 
+void test3(){
+    std::cout<<"\n============================================\n";
+    std::vector<int>num1{1,2,3,4,5};
+
+    std::vector<int>::const_iterator it1 = num1.begin();
+
+    while(it1 != num1.end()){
+        std::cout<<*it1 <<std::endl;
+        it1++;
+    }
+    it1 = num1.begin();
+    while(it1 != num1.end()){
+//      *it1 = 0; //compiler err - read only
+        it1++;
+    }
+}
+
+void test4(){
+
+}
+
+
 int main()
 {
 //    test1();
-      test2();
+//    test2();
+//    test3();
+      test4();
+
 }
