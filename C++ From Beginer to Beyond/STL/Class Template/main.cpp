@@ -35,6 +35,15 @@ int main() {
               <<item3.get_value().get_name()
               <<item3.get_value().get_value() <<std::endl;
 
+    std::cout<<"\n=============================================================\n";
+    std::vector<Item<double>> vec{};
+    vec.push_back(Item<double>{"Larry", 100.0});
+    vec.push_back(Item<double>{"Moe", 200.0});
+    vec.push_back(Item<double>{"Curly", 300.0});
+
+    for(const auto &item: vec){
+        std::cout<< item.get_name() <<" " <<item.get_value() <<std::endl;
+    }
 
     return 0;
 }
