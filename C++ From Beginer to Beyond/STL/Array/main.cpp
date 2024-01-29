@@ -47,9 +47,25 @@ void test2(){
     display(arr2);
 }
 
+void test3(){
+    std::cout<<"\nTest3===========================================" <<std::endl;
+
+    std::array<int, 5> arr {1,2,3,4,5};
+
+    int *ptr = arr.data();
+    std::cout <<ptr <<std::endl;
+    *ptr = 1000;
+
+    display(arr);
+
+}
+
+
+
 int main() {
     test1();
     test2();
+    test3();
 
     return 0;
 }
