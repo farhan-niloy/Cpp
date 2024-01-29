@@ -47,8 +47,26 @@ void find_test(){
         std::cout<<"Moe not found" <<std::endl;
 }
 
-int main(){
+void count_test() {
+    std::cout<<"\n=======================================" <<std::endl;
 
+    std::vector<int> vec {1,2,3,4,5,1,2};
+
+    int num = std::count(vec.begin(), vec.end(), 1);
+    std::cout <<num <<" occurrence found";
+}
+
+void count_if_test() {
+    std::cout<<"\n===========================================\n";
+
+    std::vector<int> vec {1,2,3,4,5,1,2,1,1000};
+    int num = std::count_if(vec.begin(), vec.end(), [](int x) {return x % 2 == 0;});
+    std::cout <<num <<" even numbers found" <<std::endl;
+}
+
+int main(){
+//    find_test();
+count_if_test();
 
     return 0;
 }
