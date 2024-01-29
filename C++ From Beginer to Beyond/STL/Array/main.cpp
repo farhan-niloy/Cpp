@@ -93,6 +93,15 @@ void test6(){
         std::cout<<"NO adjacent element found " <<std::endl;
 }
 
+void test7() {
+    std::cout<<"\nTest7===============================================" <<std::endl;
+    //accumulate is from #include <numeric>
+    std::array<int,5> arr {1,2,3,4,5};
+
+    int sum = std::accumulate(arr.begin(), arr.end(), 0); //"0" starting from
+    std::cout<<"Sum of the elements in arr1 is: " <<sum <<std::endl;
+}
+
 
 int main() {
     test1();
