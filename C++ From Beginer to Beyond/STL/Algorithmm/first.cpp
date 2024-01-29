@@ -64,9 +64,23 @@ void count_if_test() {
     std::cout <<num <<" even numbers found" <<std::endl;
 }
 
+void replace_test(){
+    std::cout<<"\n=======================================" <<std::endl;
+
+    std::vector<int> vec {1,2,3,4,5,1,};
+
+    std::replace(vec.begin(), vec.end(), 1, 1000);
+    for (auto i: vec)
+        std::cout <<i <<" ";
+    std::cout <<std::endl;
+}
+
 int main(){
-//    find_test();
-count_if_test();
+//find_test();
+//count_test();
+//count_if_test();
+replace_test();
+
 
     return 0;
 }
