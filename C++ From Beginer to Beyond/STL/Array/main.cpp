@@ -60,6 +60,38 @@ void test3(){
 
 }
 
+void test4() {
+    std::cout<<"\nTest4===================================================" <<std::endl;
+
+    std::array<int, 5> arr1 {2,1,4,5,3};
+    display(arr1);
+
+    std::sort(arr1.begin(), arr1.end());
+    display(arr1);
+
+}
+
+void test5() {
+    std::cout << "\n============================================" << std::endl;
+
+    std::array<int, 5> arr1{2, 1, 4, 5, 6};
+
+    std::array<int, 5>::iterator min_num = std::min_element(arr1.begin(), arr1.end());
+    auto max_num = std::max_element(arr1.begin(), arr1.end());
+    std::cout<<"min: " <<*min_num <<" , max: " <<*max_num <<std::endl;
+}
+
+void test6(){
+    std::cout<<"\nTest6=======================================" <<std::endl;
+
+    std::array<int, 5> arr1 {2,1,3,4,5};
+
+    auto adjacent = std::adjacent_find(arr1.begin(), arr1.end());
+    if(adjacent != arr1.end())
+        std::cout<<"Adjacent element found with value: " <<*adjacent <<std::endl;
+    else
+        std::cout<<"NO adjacent element found " <<std::endl;
+}
 
 
 int main() {
