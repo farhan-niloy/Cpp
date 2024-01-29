@@ -104,10 +104,19 @@ void test7() {
 
 void test8() {
     std::cout<<"\nTest8=================================================" <<std::endl;
-    std::array<int, 10> arr {1,2,3,4,5,6,7,3,3,4,4,4,4};
+    std::array<int, 10> arr {1,2,3,4,5,6,7,3,3};
 
-    int count = std::count(arr.begin(), arr.end(), 4);
-    std::cout <<"Found 4: " <<count <<"times" <<std::endl;
+    int count = std::count(arr.begin(), arr.end(), 3);
+    std::cout <<"Found 4: " <<count <<" times" <<std::endl;
+}
+
+void test9() {
+    std::cout<<"\nTest9==========================================" <<std::endl;
+    std::array<int, 10> arr {1,2,3,50,60,70,80,200,300,400};
+
+    int count = std::count_if(arr.begin(), arr.end(), [](int x) {return x>10 && x<200; });
+
+    std::cout <<"Found " <<count <<" matches" <<std::endl;
 }
 
 
@@ -119,6 +128,8 @@ int main() {
     test5();
     test6();
     test7();
+    test8();
+    test9();
 
     return 0;
 }
