@@ -33,6 +33,18 @@ void find_test(){
         std::cout <<"Found the number: " <<*loc <<std::endl;
     else
         std::cout <<"Couldn't find the number" <<std::endl;
+
+    std::list<Person> players {
+            {"Larry", 18},
+            {"Moe", 20},
+            {"Curly", 21}
+    };
+
+    auto loc1 = std::find(players.begin(), players.end(), Person{"Moe", 20});
+    if (loc1 != players.end())
+        std::cout<<"Found Moe" <<std::endl;
+    else
+        std::cout<<"Moe not found" <<std::endl;
 }
 
 int main(){
