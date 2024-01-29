@@ -102,6 +102,14 @@ void test7() {
     std::cout<<"Sum of the elements in arr1 is: " <<sum <<std::endl;
 }
 
+void test8() {
+    std::cout<<"\nTest8=================================================" <<std::endl;
+    std::array<int, 10> arr {1,2,3,4,5,6,7,3,3,4,4,4,4};
+
+    int count = std::count(arr.begin(), arr.end(), 4);
+    std::cout <<"Found 4: " <<count <<"times" <<std::endl;
+}
+
 
 int main() {
     test1();
@@ -110,6 +118,7 @@ int main() {
     test4();
     test5();
     test6();
+    test7();
 
     return 0;
 }
