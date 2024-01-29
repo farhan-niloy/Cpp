@@ -75,11 +75,25 @@ void replace_test(){
     std::cout <<std::endl;
 }
 
+void all_of_test(){
+    std::vector<int> vec1 {1,2,3,4,5,6,7,9,1,2,23,4,19};
+    if (std::all_of(vec1.begin(), vec1.end(), [](int x){return x > 10;}))
+        std::cout<<"All the elements are > 10" <<std::endl;
+    else
+        std::cout<<"Not all the elements are > 10" <<std::endl;
+
+    if (std::all_of(vec1.begin(), vec1.end(), [](int x){return x < 30;}))
+        std::cout<<"All the elements are < 20" <<std::endl;
+    else
+        std::cout<<"Not all the elements are < 20" <<std::endl;
+}
+
 int main(){
 //find_test();
 //count_test();
 //count_if_test();
-replace_test();
+//replace_test();
+all_of_test();
 
 
     return 0;
