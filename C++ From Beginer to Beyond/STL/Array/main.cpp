@@ -33,7 +33,23 @@ void test1(){
     std::cout<<"Back of arr2: " <<arr2.back() <<std::endl;
 }
 
+void test2(){
+    std::cout<<"\nTest2=========================================" <<std::endl;
+    std::array<int, 5> arr {1,2,3,4,5};
+    std::array<int, 5> arr2 {10, 20, 30, 40, 50};
+
+    display(arr);
+    display(arr2);
+
+    arr.swap(arr2);
+
+    display(arr);
+    display(arr2);
+}
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    test1();
+    test2();
+
     return 0;
 }
