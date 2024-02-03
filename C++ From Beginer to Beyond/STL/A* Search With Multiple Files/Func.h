@@ -28,5 +28,9 @@ vector<State> ParseLine(string line);
 void PrintBoard(const vector<vector<State>> board);
 string CellString(State cell);
 
+int Heuristic(int x1, int y1, int x2, int y2);
+void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openlist, vector<vector<State>> &grid);
+vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2]);
+
 
 #endif //A__SEARCH_WITH_MULTIPLE_FILES_FUNC_H

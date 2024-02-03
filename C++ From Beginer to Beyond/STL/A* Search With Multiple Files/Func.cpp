@@ -44,9 +44,26 @@ void PrintBoard(const vector<vector<State>> board) {
 string CellString(State cell) {
     switch(cell) {
         case State::kObstacle: return "⛰   ";
-        case State::kPath: return "🚗   ";
-        case State::kStart: return "🚦   ";
-        case State::kFinish: return "🏁   ";
         default: return "0   ";
     }
+}
+
+int Heuristic(int x1, int y1, int x2, int y2) {
+    return abs(x2-x1) + (y2-y1);
+}
+
+void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openlist, vector<vector<State>> &grid){
+
+}
+
+
+vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2]) {
+    vector<vector<int>> open {};
+
+    int x = init[0];
+    int y = init[1];
+    int g = 0;
+    int h = Heuristic(x, y, goal[0], goal[1]);
+    AddToOpen(x, y, g, h, open , grid);
+
 }
