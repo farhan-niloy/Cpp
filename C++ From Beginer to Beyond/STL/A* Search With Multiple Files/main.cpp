@@ -1,6 +1,7 @@
 #include <iostream>
+#include "Func.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    auto board = ReadBoardFile("../1.board");
     return 0;
 }
