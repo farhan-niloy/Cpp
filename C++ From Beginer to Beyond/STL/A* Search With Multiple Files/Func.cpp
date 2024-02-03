@@ -52,18 +52,39 @@ int Heuristic(int x1, int y1, int x2, int y2) {
     return abs(x2-x1) + (y2-y1);
 }
 
+bool Compare(const vector<int> a, const vector<int> b){
+    int f1 = a[2] + a[3];
+    int f2 = b[2] + b[3];
+    return f1 > f2;
+}
+
+void CellSort(vector<vector<int>> *v) {
+    sort(v->begin(), v->end(), Compare);
+}
+
 void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openlist, vector<vector<State>> &grid){
 
 }
 
 
+
+
 vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2]) {
     vector<vector<int>> open {};
-
     int x = init[0];
     int y = init[1];
     int g = 0;
     int h = Heuristic(x, y, goal[0], goal[1]);
-    AddToOpen(x, y, g, h, open , grid);
+    AddToOpen(x, y, g, h, open, grid);
+
+    while (open.size() > 0) {
+        cellSort (&open);
+    }
 
 }
+
+bool CheckValidCell(int x, int y, vector<vector<State>> &grid){
+
+}
+
+
