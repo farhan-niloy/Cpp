@@ -1,19 +1,17 @@
 #include "include/raylib.h"
 
 int main(void) {
-    const int screenWidth = 800;
-    const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "Hello, Raylib!");
+  InitWindow(1024, 768, "Hello World!");
 
-    while (!WindowShouldClose()) {
+    while (WindowShouldClose() == false) {
+
         BeginDrawing();
-        ClearBackground(RAYWHITE);
-        DrawText("Hello, Raylib!", 10, 10, 20, DARKGRAY);
+        ClearBackground(RED);
         EndDrawing();
     }
 
-    CloseWindow();
+
     return 0;
 }
 
