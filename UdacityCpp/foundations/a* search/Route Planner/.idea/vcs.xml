@@ -3,5 +3,10 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../../../.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$/CppND-Route-Planning-Project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/thirdparty/io2d/P0267_RefImpl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/thirdparty/io2d/P0267_RefImpl/P0267_RefImpl/Samples/maps/external/pugixml" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/thirdparty/io2d/P0267_RefImpl/P0267_RefImpl/Samples/svg/external/rapidxml_ns" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/thirdparty/io2d/P0267_RefImpl/P0267_RefImpl/Samples/svg/external/svgpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/thirdparty/io2d/P0267_RefImpl/P0267_RefImpl/Tests/Catch2" vcs="Git" />
   </component>
 </project>
