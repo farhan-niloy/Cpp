@@ -24,7 +24,7 @@ int main() {
     ClearBackground(WHITE);
 
     if (IsKeyPressed(KEY_SPACE)) {
-        velocity -= 1;
+        velocity -= 10;
     }
 
     posY += velocity;
