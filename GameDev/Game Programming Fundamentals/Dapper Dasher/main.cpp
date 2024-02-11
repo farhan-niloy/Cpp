@@ -9,6 +9,13 @@ int main() {
   //Initialize the Window
   InitWindow(WindowWidth, WindowHeight, "Dapper Dasher");
 
+  // Rectangle Dimensions
+  const int width{50};
+  const int height{80};
+
+  int posY{WindowHeight - height};
+  int velocity{-10};
+
   SetTargetFPS(60);
 
   while (!WindowShouldClose()) {
@@ -16,6 +23,10 @@ int main() {
     // Start Drawing
     BeginDrawing();
     ClearBackground(WHITE);
+
+    posY += velocity;
+
+    DrawRectangle(WindowWidth/2, posY, width, height, BLUE)
 
     //Stop Drawing
     EndDrawing();
