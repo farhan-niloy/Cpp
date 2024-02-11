@@ -23,8 +23,8 @@ int main() {
     BeginDrawing();
     ClearBackground(WHITE);
 
-    if(IsKeyPressed(KEY_D)) {
-      velocity -= 10;
+    if (IsKeyPressed(KEY_SPACE)) {
+        velocity -= 1;
     }
 
     posY += velocity;
@@ -35,7 +35,6 @@ int main() {
     EndDrawing();
 
   }
-
 
   return 0;
 }
