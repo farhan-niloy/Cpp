@@ -26,7 +26,7 @@ int main() {
 
     posY += velocity;
 
-    DrawRectangle(WindowWidth/2, posY, width, height, BLUE)
+    DrawRectangle(WindowWidth/2, posY, width, height, BLUE);
 
     //Stop Drawing
     EndDrawing();
