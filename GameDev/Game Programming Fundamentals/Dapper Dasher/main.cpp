@@ -7,7 +7,7 @@ int main() {
   const int WindowWidth{1400};
 
   //Initialize the Window
-  InitWindow(WindowWidth, Window_Height, "Dapper Dasher");
+  InitWindow(WindowWidth, WindowHeight, "Dapper Dasher");
 
   SetTargetFPS(60);
 
