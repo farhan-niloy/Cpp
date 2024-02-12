@@ -25,8 +25,14 @@ int main() {
   scarfyPos.x = WindowWidth/2 - scarfyRec.width/2;
   scarfyPos.y = WindowHeight - scarfyRec.height;
 
+  // Animation Frame 
+  int frame{};
 
   bool isInAir{};
+
+  // Amount of Time Before We Update the Animation Frame
+  const float updateTime{1.0 / 12.0};
+  float runningTime{};
 
   SetTargetFPS(60);
   while (!WindowShouldClose()) {
@@ -57,6 +63,20 @@ int main() {
 
     // Update Position
     scarfyPos.y += velocity * dT;
+
+    // Update Running Time 
+    runningTime += dT;
+
+    if (runningTime >= updateTime) {
+      runningTime = 0.0;
+
+      // Update Animation Frame 
+      scarfyRec.x = frame * scarfyRec.width;
+      frame++;
+      if (frame > 5) {
+        frame = 0;
+      }
+    }
 
     DrawTextureRec(scarfy, scarfyRec, scarfyPos, WHITE);
 
