@@ -7,14 +7,16 @@ struct Date {
   int day;
   int month;
   int year;
-}
+};
 
 // Define a main function instantiate and test 
 int main () {
   Date date;
 
   // TODO: Initialize date to August 29, 1981
-  
+  date.day = 29;
+  date.month = 8;
+  date.year = 1981;
 
   // Test 
   assert(date.day == 29);
