@@ -2,45 +2,50 @@
 #include <string>
 
 class Animal {
-  protected:
-    string color;
-    string name;
+protected:
+    std::string color;
+    std::string name;
     int age;
 };
 
 class Snake : public Animal {
-  private:
+private:
     float length;
-  public:
-    Snake(std::string _string, std::string _name, int age, float length) : Animal(_color, _name, age), length(_length) {}
-    void MakeSound() { 
-      std::cout<<"Hisss! Hisss! \n";
+
+public:
+    // Corrected parameter names in constructor
+    Snake(std::string _color, std::string _name, int _age, float _length)
+        : Animal(_color, _name, _age), length(_length) {}
+
+    void MakeSound() {
+        std::cout << "Hisss! Hisss! \n";
     }
 };
 
 class Cat : public Animal {
-  private: 
+private:
     float height;
-  public:
-    Cat( std::string _color, std::string _name, int age, float height) : Animal(_color, _name, _age), height(_heigt) {}
+
+public:
+    // Corrected parameter names in constructor
+    Cat(std::string _color, std::string _name, int _age, float _height)
+        : Animal(_color, _name, _age), height(_height) {}
+
     void MakeSound() {
-      std::cout<<"Meow! Meow!";
+        std::cout << "Meow! Meow! \n";
     }
 };
 
 int main() {
-  Snake snake("Gray", "Python", 5, 4.5);
-  Cat cat("Orange", "Puss", 3, 10);
-  
-  std::cout<<"Snake " <<snake.name <<" says:" <<std::endl;
-  snake.MakeSound();
+    Snake snake("Gray", "Python", 5, 4.5);
+    Cat cat("Orange", "Puss", 3, 10);
 
-  std::cout<<"Cat " <<cat.name <<" syas:" <<std::endl;
-  cat.MakeSound();
+    std::cout << "Snake " << snake.name << " says: " << std::endl;
+    snake.MakeSound();
 
-  return 0;
+    std::cout << "Cat " << cat.name << " says: " << std::endl;
+    cat.MakeSound();
 
-
-
+    return 0;
 }
 
