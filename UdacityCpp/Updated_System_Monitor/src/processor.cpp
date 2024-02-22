@@ -29,7 +29,7 @@ long Processor::CurrentTotal() { return LinuxParser::Jiffies();}
 
 long Processor::PrevTotal() { return m_total; }
 long Processor::PrevActive() { return m_active; }
-long Processor::PRevIdle() { return m_idle; }
+long Processor::PrevIdle() { return m_idle; }
 void Processor::Update(long idle, long active, long total) {
   m_idle = idle;
   m_total = total;
