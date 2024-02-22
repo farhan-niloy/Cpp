@@ -302,19 +302,19 @@ string LinuxParser::User(int pid) {
 long LinuxParser::UpTime(int pid) {
   string line, value;
   vector<string> values;
-  long starTime = 0;
+  long startTime = 0;
   std::ifstream stream(kProcDirectory + std::to_string(pid) + kStatFilename);
   if(stream.is_open()){
     std::getline(stream, line);
     std::istringstream linestream(line);
     while ( linestream >> value) {
-      values.push_back(value)
+      values.push_back(value); // Added a semicolon
     }
   }
   try {
-    starTime = stol(value[21]/ sysconf(_SC_CLK_TCK));
-  } catch {...} {
-    starTime = 0
+    startTime = stol(values[21]) / sysconf(_SC_CLK_TCK);
+  } catch (...) {
+    startTime = 0;
   }
-  return starTime;
+  return startTime;
 }
