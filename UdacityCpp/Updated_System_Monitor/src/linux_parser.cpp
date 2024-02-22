@@ -219,6 +219,7 @@ int LinuxParser::RunningProcesses() {
 string LinuxParser::Command(int pid) {
   string command;
   string key, line, memStr;
+  long mem;
   std::ifstream stream(kProcDirectory + std::to_string(pid) + kStatFilename);
   if(stream.is_open()) {
     while (std::getline(stream, line)) {
