@@ -248,7 +248,7 @@ string LinuxParser::Ram(int pid) {
       std::istringstream streamline(line);
       streamline >> key;
       if(key == "VmSize:") {
-        linestream >> mem;
+        streamline >> mem;
         mem /= 1000;
         memStr = std::to_string(mem);
         break;
@@ -290,7 +290,7 @@ string LinuxParser::User(int pid) {
       linestream >> temp >> x >> id;
       if(id == uid) {
         name = temp;
-        break
+        break;
       }
     }
   }
