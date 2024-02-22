@@ -94,26 +94,23 @@ float LinuxParser::MemoryUtilization() {
 
 // TODO: Read and return the system uptime
 long LinuxParser::UpTime() {
-  string line;
-  string wholeTime;
+  // Read and return the system uptime
+  long uptime;
+  string line, uptimeStr;
   std::ifstream stream(kProcDirectory + kUptimeFilename);
-  if(stream.is_open()){
-    while(std::getline(stream, line)) {
-      std::istringstream lineStream(line);
-      while(lineStream >> wholeTime) {
-        try {
-          return std::stol(wholeTime)
-        } catch (const std::invalid_argument& arg) {
-          return 0;
-        }
-      }
-    }
+  if (stream.is_open()) {
+    std::getline(stream, line);
+    std::istringstream uptimeStream(line);
+    uptimeStream >> uptimeStr;
   }
-  return 0;
+  uptime = std::stol(uptimeStr);
+  return uptime;
 }
 
 // TODO: Read and return the number of jiffies for the system
-long LinuxParser::Jiffies() { LinuxParser::ActiveJiffies() + LinuxParser::IdleJiffies() };
+long LinuxParser::Jiffies() {
+  return LinuxParser::ActiveJiffies() + LinuxParser::IdleJiffies();
+};
 
 // TODO: Read and return the number of active jiffies for a PID
 // REMOVE: [[maybe_unused]] once you define the function
@@ -123,8 +120,7 @@ long LinuxParser::ActiveJiffies(int pid) {
   vector<string> values;
   std::ifstream stream(kProcDirectory + std::to_string(pid) + kStatFilename);
   if(stream.is_open()) {
-    std:;
-    getline(stream, line);
+    std::getline(stream, line);
     std::istringstream linestream(line);
     while(linestream >> value) {
       values.push_back(value);
@@ -149,24 +145,80 @@ long LinuxParser::ActiveJiffies(int pid) {
 
 // TODO: Read and return the number of active jiffies for the system
 long LinuxParser::ActiveJiffies() {
+  auto jiffies = CpuUtilization();
 
+  return stol(jiffies[CPUStates::kUser_]) + stol(jiffies[CPUStates::kNice_]) +
+         stol(jiffies[CPUStates::kSystem_]) + stol(jiffies[CPUStates::kIRQ_]) +
+         stol(jiffies[CPUStates::kSoftIRQ_]) + stol(jiffies[CPUStates::kSteal_]);
 }
 
 // TODO: Read and return the number of idle jiffies for the system
-long LinuxParser::IdleJiffies() { return 0; }
+long LinuxParser::IdleJiffies() {
+  auto jiffies = CpuUtilization();
+  return stol(jiffies[CPUStates::kIdle_]) + stol(jiffies[CPUStates::kIOwait_]);
+}
 
 // TODO: Read and return CPU utilization
-vector<string> LinuxParser::CpuUtilization() { return {}; }
+vector<string> LinuxParser::CpuUtilization() {
+  string line, cpu, value;
+  vector<string> jiffies;
+  std::ifstream stream(kProcDirectory + kStatFilename);
+  if (stream.is_open()) {
+    std::getline(stream, line);
+    std::istringstream linestream(line);
+
+    linestream >> cpu;
+
+    while(linestream >> value) {
+      jiffies.push_back(value);
+    }
+  }
+
+  return jiffies;
+
+}
 
 // TODO: Read and return the total number of processes
-int LinuxParser::TotalProcesses() { return 0; }
+int LinuxParser::TotalProcesses() {
+  int processes;
+  string key, line;
+  std::ifstream stream(kProcDirectory + kStatFilename);
+  if (stream.is_open()) {
+    while (std::getline(stream, line)) {
+      std::istringstream linestream(line);
+      linestream >> key;
+      if(key == "processes") {
+        linestream >> processes;
+        break;
+      }
+    }
+  }
+  return processes;
+}
 
 // TODO: Read and return the number of running processes
-int LinuxParser::RunningProcesses() { return 0; }
+int LinuxParser::RunningProcesses() {
+  int processes;
+  string key, line;
+  std::ifstream stream (kProcDirectory + kStatFilename);
+  if( stream.is_open()) {
+    while(std::getline(stream, line)) {
+      std::istringstream  streamline(line);
+      streamline >> key;
+      if(key == "procs_running") {
+        streamline >> processes;
+        break;
+      }
+    }
+  }
+  return processes;
+}
 
 // TODO: Read and return the command associated with a process
 // REMOVE: [[maybe_unused]] once you define the function
-string LinuxParser::Command(int pid[[maybe_unused]]) { return string(); }
+string LinuxParser::Command(int pid) {
+  string command;
+}
 
 // TODO: Read and return the memory used by a process
 // REMOVE: [[maybe_unused]] once you define the function
