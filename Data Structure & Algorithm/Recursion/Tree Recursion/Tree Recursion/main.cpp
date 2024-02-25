@@ -7,8 +7,16 @@
 
 #include <iostream>
 
+void fun(int n) {
+    if(n>0) {
+        std::cout<< n <<" ";
+        fun(n - 1 );
+        fun(n - 1 );
+    }
+}
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    fun(3);
+   std::cout<< std::endl;
     return 0;
 }
