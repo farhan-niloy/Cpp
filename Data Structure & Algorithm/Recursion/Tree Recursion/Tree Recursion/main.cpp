@@ -12,11 +12,12 @@ void fun(int n) {
         std::cout<< n <<" ";
         fun(n - 1 );
         fun(n - 1 );
+        fun(n - 1);
     }
 }
 
 int main(int argc, const char * argv[]) {
     fun(3);
-   std::cout<< std::endl;
+    std::cout<< std::endl;
     return 0;
 }
