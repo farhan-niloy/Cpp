@@ -17,7 +17,7 @@ void fun(int n) {
 }
 
 int main(int argc, const char * argv[]) {
-    fun(3);
+    fun(4);
     std::cout<< std::endl;
     return 0;
 }
