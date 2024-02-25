@@ -16,8 +16,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "main(argc, argv)"
+            landmarkType = "9">
             <Locations>
                <Location
                   uuid = "7BA0A57F-B19C-4AEA-979D-0441CF64EA46 - 6cb4ef554a857b94"
