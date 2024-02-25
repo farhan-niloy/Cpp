@@ -14,10 +14,42 @@
             filePath = "Static Global/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "main(argc, argv)"
-            landmarkType = "9">
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "7BA0A57F-B19C-4AEA-979D-0441CF64EA46 - 6cb4ef554a857b94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "Static Global"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/farhanniloy/Programming/Cpp/Cpp/Data%20Structure%20&amp;%20Algorithm/Recursion/Static%20Global/Static%20Global/main.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "7BA0A57F-B19C-4AEA-979D-0441CF64EA46 - 6cb4ef554a857b94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "Static Global"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/farhanniloy/Programming/Cpp/Cpp/Data%20Structure%20&amp;%20Algorithm/Recursion/Static%20Global/Static%20Global/main.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
