@@ -38,14 +38,18 @@ public:
     void Deposit(double n) {
         if (n > 0) {
             balance += n;
+            deposit += n;
             cout << n << " Deposit Successful!\n";
         }
     }
     
     void Withdraw(double n) {
-        if (balance > n && n > 0) {
+        if (balance < n && n > 0) {
             balance -= n;
-            cout << n << " withdrawal successful, your remaining balance is: " << balance;
+            withdraw += n;
+            cout << n << " Withdrawal Successful, Your Remaining Balance Is: " << balance;
+        } else {
+            cout<<"Sorry, Insufficient Funds!" <<endl;
         }
     }
 };
@@ -127,14 +131,25 @@ int main(int argc, const char * argv[]) {
                     std::cin>> account_num;
                     
                     try {
-                        accounts[account_num - 1].Deposit(temp_d);
+                    accounts[account_num - 1].Deposit(temp_d);
                     } catch(const std::out_of_range& e) {
                         std::cerr<<"Invalid Account Number! " <<endl;
                     }
             
                     break;
                 case 4:
-                    cout << " Withdraw";
+                    double temp_w;
+                    int account_num_w;
+                    cout<<"Enter Withdraw Amount: ";
+                    std::cin>> temp_w;
+                    cout<<"Enter Account No: ";
+                    std::cin>>account_num_w;
+                    
+                    try {
+                        accounts[account_num_w].Withdraw(temp_w);
+                    } catch (const std::out_of_range& e) {
+                        std::cerr<<"Invalid Account Number! " <<std::endl;
+                    }
                     break;
                 case 5:
                     cout << " Close an Account";
