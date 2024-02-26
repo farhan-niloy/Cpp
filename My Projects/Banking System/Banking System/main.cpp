@@ -6,6 +6,16 @@ using std::cout;
 using std::endl;
 using std::vector;
 
+// Colors
+#define RESET   "\033[0m"
+#define RED     "\033[31m"
+#define GREEN   "\033[32m"
+#define YELLOW  "\033[33m"
+#define BLUE    "\033[34m"
+#define MAGENTA "\033[35m"
+#define CYAN    "\033[36m"
+#define WHITE   "\033[37m"
+
 class Account {
 private:
     string name;
@@ -78,42 +88,54 @@ int main(int argc, const char * argv[]) {
         cout << "       6 Show All Accounts \n";
         cout << "       7 Quit \n";
         cout << "\nEnter Your Choice: ";
-        std::cin >> options;
         
-        switch (options) {
-            case 1: {
-                Account new_account = OpenAccount();
-                cout<< "Name: " <<new_account.GetName() <<endl;
-                cout<< "Balance: " <<new_account.GetBalance() <<endl;;
-                cout<< "Number of Accounts: " <<new_account.GetNumAccount() <<endl;
-                accounts.emplace_back(new_account);
-                break;
-            }
-            case 2:
-                cout << " Balance Enquiry";
-                break;
-            case 3:
-                cout << " Deposit";
-                break;
-            case 4:
-                cout << " Withdraw";
-                break;
-            case 5:
-                cout << " Close an Account";
-                break;
-            case 6:
-                cout << " Show All Accounts";
-                break;
-            case 7:
-                quit = true;
-                break;
-            default:
-                cout << " Invalid Selection: (" << options << ")" << endl;
+        if(!(std::cin >> options)) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout <<RED  <<"Invalid input, Enter numbers only! \n" <<RESET;
+            continue;
         }
         
-        cout<<"Name: " <<accounts[0].GetName();
-        cout<<"Balance: " <<accounts[0].GetBalance();
-        cout<<"Num Account: " <<accounts[0].GetNumAccount();
+        
+        if(options>= 1 && options<=7){
+            switch (options) {
+                case 1: {
+                    Account new_account = OpenAccount();
+                    cout<<"\n Congratulations New Account Created! " <<endl;
+                    cout<< " Name:           " <<new_account.GetName() <<endl;
+                    cout<< " Balance:        " <<new_account.GetBalance() <<endl;;
+                    cout<< " Account Number: " <<new_account.GetNumAccount() <<endl;
+                    accounts.emplace_back(new_account);
+                    break;
+                }
+                case 2:
+                    cout << " Balance Enquiry";
+                    break;
+                case 3:
+                    cout << " Deposit";
+                    break;
+                case 4:
+                    cout << " Withdraw";
+                    break;
+                case 5:
+                    cout << " Close an Account";
+                    break;
+                case 6:
+                    cout << " Show All Accounts";
+                    break;
+                case 7:
+                    quit = true;
+                    break;
+                default:
+                    cout << " Invalid Selection: (" << options << ")" << endl;
+            }
+        } else {
+            cout<<"\n Invalid Enter!";
+        }
+        
+//        cout<<"Name: " <<accounts[0].GetName();
+//        cout<<"Balance: " <<accounts[0].GetBalance();
+//        cout<<"Num Account: " <<accounts[0].GetNumAccount();
     }
     
     return 0;
