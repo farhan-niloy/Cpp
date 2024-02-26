@@ -8,9 +8,56 @@
 #include <iostream>
 #include <string>
 
+using std::string;
 using std::vector;
 using std::cout;
 using std::endl;
+
+class Account {
+private:
+    string name;
+    double balance;
+    string account_number;
+    int deposit;
+    int withdraw;
+    bool closeAccount;
+    static int numAccount;
+    
+    
+public:
+    Account();
+    Account(string _name, int _deposit, string _account_number) : name(_name), deposit(_deposit), account_number(_account_number) {
+        numAccount++;
+    };
+
+    string GetName() { return name; }
+    double GetBalance() { return balance; }
+    
+    void Deposit(double n) {
+        if(n>0){
+            deposit+=n;
+            cout<< n <<" deposit successful, your total balance now: " <<balance;
+        }
+    }
+    
+    void Withdraw(double n) {
+        if(balance>n && n>0){
+            balance-=n;
+            cout<< n <<" withdrawal successful, your remaining balance is: " <<balance;
+        }
+    }
+
+};
+
+void OpenAccount() {
+    string name;
+    double balance;
+    
+    cout<<"Enter Full Name: ";
+    std::cin>>name;
+    cout<<"Enter Initial Balance: ";
+    std::cin>>balance;
+}
 
 int main(int argc, const char * argv[]) {
     
