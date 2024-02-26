@@ -17,7 +17,6 @@ class Account {
 private:
     string name;
     double balance;
-    string account_number;
     int deposit;
     int withdraw;
     bool closeAccount;
@@ -26,7 +25,7 @@ private:
     
 public:
     Account();
-    Account(string _name, int _deposit, string _account_number) : name(_name), deposit(_deposit), account_number(_account_number) {
+    Account(string _name, int _deposit) : name(_name), deposit(_deposit) {
         numAccount++;
     };
 
@@ -51,12 +50,13 @@ public:
 
 void OpenAccount() {
     string name;
-    double balance;
-    
+    double deposit;
     cout<<"Enter Full Name: ";
     std::cin>>name;
-    cout<<"Enter Initial Balance: ";
-    std::cin>>balance;
+    cout<<"Enter Initial Deposit: ";
+    std::cin>> deposit;
+    
+    Account *new_accout = new Account(name, deposit);
 }
 
 int main(int argc, const char * argv[]) {
@@ -81,7 +81,7 @@ int main(int argc, const char * argv[]) {
         
         switch (options) {
             case 1:
-                cout<< " Open an Account";
+                OpenAccount();
                 break;
             case 2:
                 cout<< " Balance Enquiry";
