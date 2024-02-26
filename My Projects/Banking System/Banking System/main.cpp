@@ -38,7 +38,7 @@ public:
     void Deposit(double n) {
         if (n > 0) {
             balance += n;
-            cout << n << " deposit successful, your total balance now: " << balance;
+            cout << n << " Deposit Successful!\n";
         }
     }
     
@@ -109,10 +109,29 @@ int main(int argc, const char * argv[]) {
                     break;
                 }
                 case 2:
-                    cout << " Balance Enquiry";
+                    int temp;
+                    cout<<"Enter Account No: ";
+                    std::cin>> temp;
+                    try {
+                        cout << "Your Total Balance Is: " <<accounts[temp-1].GetBalance();
+                    } catch(const std::out_of_range& e) {
+                        std::cerr<<"Invalid Account Number!" <<endl;
+                    }
                     break;
                 case 3:
-                    cout << " Deposit";
+                    double temp_d;
+                    int account_num;
+                    cout<<"Enter Deposit Amount: ";
+                    std::cin>> temp_d;
+                    cout<<"Enter Account Num: ";
+                    std::cin>> account_num;
+                    
+                    try {
+                        accounts[account_num - 1].Deposit(temp_d);
+                    } catch(const std::out_of_range& e) {
+                        std::cerr<<"Invalid Account Number! " <<endl;
+                    }
+            
                     break;
                 case 4:
                     cout << " Withdraw";
