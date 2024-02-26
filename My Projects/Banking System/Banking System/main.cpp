@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using std::string;
 using std::cout;
@@ -16,6 +17,8 @@ using std::vector;
 #define CYAN    "\033[36m"
 #define WHITE   "\033[37m"
 
+int number_of_account;
+
 class Account {
 private:
     string name;
@@ -29,6 +32,7 @@ public:
     Account();
     Account(string _name, double _deposit) : name(_name), balance(_deposit), deposit(_deposit) {
         numAccount++;
+        number_of_account++;
     }
 
     string GetName() { return name; }
@@ -152,10 +156,16 @@ int main(int argc, const char * argv[]) {
                     }
                     break;
                 case 5:
-                    cout << " Close an Account";
-                    break;
+                    int account_num_c;
+                    cout<<"To Close Your Account Enter Account Number: ";
+                    std::cin>>account_num_c;
+                    try {
+                        accounts.erase(accounts.begin() + account_num_c - 1);
+                    } catch (const std::out_of_range& e) {
+                        std::cerr<<"Invalid Account Number! " <<std::endl;
+                    }
                 case 6:
-                    cout << " Show All Accounts";
+                    cout<<"Number Of Account Is: " <<number_of_account;
                     break;
                 case 7:
                     quit = true;
