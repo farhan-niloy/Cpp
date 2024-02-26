@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <limits>
+#include <stdexcept>
 
 using std::string;
 using std::cout;
@@ -10,12 +12,6 @@ using std::vector;
 // Colors
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
-#define GREEN   "\033[32m"
-#define YELLOW  "\033[33m"
-#define BLUE    "\033[34m"
-#define MAGENTA "\033[35m"
-#define CYAN    "\033[36m"
-#define WHITE   "\033[37m"
 
 int number_of_account;
 
@@ -48,12 +44,12 @@ public:
     }
     
     void Withdraw(double n) {
-        if (balance < n && n > 0) {
+        if ( n > 0 && balance > n) {
             balance -= n;
             withdraw += n;
             cout << n << " Withdrawal Successful, Your Remaining Balance Is: " << balance;
         } else {
-            cout<<"Sorry, Insufficient Funds!" <<endl;
+            cout << "Sorry, Insufficient Funds!" << endl;
         }
     }
 };
@@ -72,11 +68,6 @@ Account OpenAccount() {
        
     Account new_account(fname + " " + lname, deposit);
     
-      //TEST RUNS
-//    cout<< "Name: " <<new_account.GetName() <<endl;
-//    cout<< "Balance: " <<new_account.GetBalance() <<endl;;
-//    cout<< "Number of Accounts: " <<new_account.GetNumAccount() <<endl;
-//    
     return new_account;
 }
 
@@ -93,14 +84,15 @@ int main(int argc, const char * argv[]) {
         cout << "       3 Deposit \n";
         cout << "       4 Withdraw \n";
         cout << "       5 Close an Account \n";
-        cout << "       6 Show All Accounts \n";
+        cout << "       6 Show Number of Accounts \n";
         cout << "       7 Quit \n";
         cout << "\nEnter Your Choice: ";
         
+        // error handling for non-numeric input
         if(!(std::cin >> options)) {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout <<RED  <<"Invalid input, Enter numbers only! \n" <<RESET;
+            std::cout << RED << "Invalid input, Enter numbers only! \n" << RESET;
             continue;
         }
         
@@ -121,7 +113,7 @@ int main(int argc, const char * argv[]) {
                     cout<<"Enter Account No: ";
                     std::cin>> temp;
                     try {
-                        cout << "Your Total Balance Is: " <<accounts[temp-1].GetBalance();
+                        cout << "Your Total Balance Is: " << accounts[temp-1].GetBalance();
                     } catch(const std::out_of_range& e) {
                         std::cerr<<"Invalid Account Number!" <<endl;
                     }
@@ -135,11 +127,10 @@ int main(int argc, const char * argv[]) {
                     std::cin>> account_num;
                     
                     try {
-                    accounts[account_num - 1].Deposit(temp_d);
+                        accounts[account_num - 1].Deposit(temp_d);
                     } catch(const std::out_of_range& e) {
                         std::cerr<<"Invalid Account Number! " <<endl;
                     }
-            
                     break;
                 case 4:
                     double temp_w;
@@ -150,7 +141,7 @@ int main(int argc, const char * argv[]) {
                     std::cin>>account_num_w;
                     
                     try {
-                        accounts[account_num_w].Withdraw(temp_w);
+                        accounts[account_num_w - 1].Withdraw(temp_w);
                     } catch (const std::out_of_range& e) {
                         std::cerr<<"Invalid Account Number! " <<std::endl;
                     }
@@ -164,6 +155,7 @@ int main(int argc, const char * argv[]) {
                     } catch (const std::out_of_range& e) {
                         std::cerr<<"Invalid Account Number! " <<std::endl;
                     }
+                    break;
                 case 6:
                     cout<<"Number Of Account Is: " <<number_of_account;
                     break;
@@ -176,10 +168,6 @@ int main(int argc, const char * argv[]) {
         } else {
             cout<<"\n Invalid Enter!";
         }
-        
-//        cout<<"Name: " <<accounts[0].GetName();
-//        cout<<"Balance: " <<accounts[0].GetBalance();
-//        cout<<"Num Account: " <<accounts[0].GetNumAccount();
     }
     
     return 0;
