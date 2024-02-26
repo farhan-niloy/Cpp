@@ -11,6 +11,7 @@ int sum3(int n);
 
 int sum2(int n);
 
+//Order of Time O(n), Order of Space(n+1)
 int sum(int n) {
     if (n == 0 )
         return 0;
