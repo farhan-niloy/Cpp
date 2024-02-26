@@ -31,7 +31,31 @@ int main(int argc, const char * argv[]) {
         cout<<"       7 Quit \n";
         cout<<"\nEnter Your Choice: " ;
         std::cin>>options;
-        cout<<options <<endl;
+        
+        switch (options) {
+            case 1:
+                cout<< " Open an Account";
+                break;
+            case 2:
+                cout<< " Balance Enquiry";
+                break;
+            case 3:
+                cout<< " Deposit";
+                break;
+            case 4:
+                cout<< " Withdraw";
+                break;
+            case 5:
+                cout<< " Close an Account";
+                break;
+            case 6:
+                cout<< " Show All Accounts";
+                break;
+            case 7:
+                quit = true;
+            default:
+                cout<<" Invalid Selection: (" <<options <<")" <<endl;
+        }
     }
     
     return 0;
