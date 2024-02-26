@@ -150,11 +150,13 @@ int main(int argc, const char * argv[]) {
                     int account_num_c;
                     cout<<"To Close Your Account Enter Account Number: ";
                     std::cin>>account_num_c;
-                    try {
-                        accounts.erase(accounts.begin() + account_num_c - 1);
-                    } catch (const std::out_of_range& e) {
-                        std::cerr<<"Invalid Account Number! " <<std::endl;
-                    }
+                    if (account_num_c >= 1 && account_num_c <= accounts.size()) {
+                            accounts.erase(accounts.begin() + account_num_c - 1);
+                            cout << "Account " << account_num_c << " closed successfully." << endl;
+                            number_of_account -= 1;
+                        } else {
+                            std::cerr << "\n Invalid Account Number! " << std::endl;
+                        }
                     break;
                 case 6:
                     cout<<"Number Of Account Is: " <<number_of_account;
