@@ -32,6 +32,10 @@ private:
     float balance;
     static long int NextAccountNumber;
     
+    friend ofstream & operator << (ofstream &ofs, Account &acc);
+    friend ifstream & operator>>(ifstream &ifs, Account &acc);
+    friend ostream & operator <<(ostream &os, Account &acc);
+    
 public:
     Account() {}
     Account(string _fname, string _lname, float _balance);
@@ -45,10 +49,6 @@ public:
     void Withdraw(float amount);
     static void setLastAccountNumber(long accountNumber);
     static long getLastAccountNumber();
-    
-    friend ofstream & operator << (ofstream &ofs, Account &acc);
-    friend ifstream & operator >> (ofstream &ifs, Account &acc);
-    friend ostream & operator <<(ostream &os, Account &acc);
 };
 
 long Account::NextAccountNumber = 0;
@@ -126,12 +126,14 @@ int main(int argc, const char * argv[]) {
                 cout<<"Enter Balance: ";
                 cin>>amount;
                 acc=b.Withdraw(accountNumber, amount);
+                break;
             case 5:
                 cout<<"Enter Account Number: ";
                 cin>>accountNumber;
                 b.ColoseAccount(accountNumber);
                 cout<<endl<<"Account is Closed! " <<endl;
                 cout<<acc;
+                break;
             case 6:
                 b.ShowAllAccounts();
                 break;
@@ -196,4 +198,19 @@ ostream &operator <<(ostream &os, Account &acc) {
     os<<"Account Number: " <<acc.GetAccount();
     os<<"Balance: " <<acc.GetBalance();
     return os;
+}
+
+Bank::Bank() {
+    
+    Account account;
+    ifstream infile;
+    
+    infile.open("Bank.data");
+    if(!infile){
+        cout<<"Error Opening! File Not Found!" <<endl;
+        return;
+    }
+    while(!infile.efo()) {
+        
+    }
 }
