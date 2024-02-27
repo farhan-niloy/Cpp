@@ -14,6 +14,7 @@ using std::endl;
 using std::ofstream;
 using std::ifstream;
 using std::ostream;
+using std::map;
 
 class Account {
 private:
@@ -25,7 +26,7 @@ private:
     
 public:
     Account() {}
-    Account(string _fname, string _lname, float balance);
+    Account(string _fname, string _lname, float _balance);
     
     long GetAccount()  { return accountNumber; }
     string GetFName()  { return fName; }
@@ -40,6 +41,23 @@ public:
     friend ofstream & operator << (ofstream &ofs, Account &acc);
     friend ifstream & operator >> (ofstream &ifs, Account &acc);
     friend ostream & operator <<(ostream &os, Account &acc);
+};
+
+long Account::NextAccountNumber = 0;
+
+class Bank {
+private:
+    map<long, Account> accounts;
+    
+public:
+    Bank();
+    Account openAccount(string _fname, string _lname, float _balance);
+    Account BalanceEnquiry(long accountNumber);
+    Account Deposit(long accountNumber, float amount);
+    Account Withdraw(long accountNumber, float amount);
+    void ColoseAccount(long accountNumber);
+    void ShowAllAccounts();
+    ~Bank();
 };
 
 int main(int argc, const char * argv[]) {
