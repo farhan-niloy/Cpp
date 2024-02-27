@@ -7,6 +7,11 @@
 
 #include <iostream>
 #include <map>
+#include <fstream>
+#include <vector>
+#include <cstdlib>
+
+#define MIN_BALANCE 500
 
 using std::string;
 using std::cout;
@@ -16,6 +21,8 @@ using std::ofstream;
 using std::ifstream;
 using std::ostream;
 using std::map;
+
+class InsufficientFunds{};
 
 class Account {
 private:
@@ -36,7 +43,7 @@ public:
     
     void Deposit(float amount);
     void Withdraw(float amount);
-    static void setLastName(long accountNumber);
+    static void setLastAccountNumber(long accountNumber);
     static long getLastAccountNumber();
     
     friend ofstream & operator << (ofstream &ofs, Account &acc);
@@ -140,4 +147,53 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
+Account::Account(string _fname, string _lname, float _balance)
+{
+    NextAccountNumber ++;
+    accountNumber=NextAccountNumber;
+    fName = _fname;
+    lName = _lname;
+    balance = _balance;
+}
 
+void Account::Withdraw(float amount) {
+    if (balance - amount < MIN_BALANCE) {
+        //throw InsufficientFunds;
+    } else {
+        balance -= amount;
+    }
+}
+
+void Account::Deposit(float amount) {
+    balance += amount;
+}
+
+void Account::setLastAccountNumber(long accountNumber){
+    NextAccountNumber = accountNumber;
+}
+
+long Account::getLastAccountNumber() {return NextAccountNumber;}
+
+ofstream & operator<<(ofstream &ofs, Account &acc) {
+    ofs<<acc.accountNumber<<endl;
+    ofs<<acc.fName <<endl;;
+    ofs<<acc.lName <<endl;
+    ofs<<acc.balance <<endl;
+    return ofs;
+}
+
+ifstream & operator>>(ifstream &ifs, Account &acc) {
+    ifs>>acc.NextAccountNumber;
+    ifs>>acc.fName;
+    ifs>>acc.lName;
+    ifs>>acc.balance;
+    return ifs;
+}
+
+ostream &operator <<(ostream &os, Account &acc) {
+    os<<"First Name: " <<acc.GetFName();
+    os<<"Last Name: " <<acc.GettLName();
+    os<<"Account Number: " <<acc.GetAccount();
+    os<<"Balance: " <<acc.GetBalance();
+    return os;
+}
