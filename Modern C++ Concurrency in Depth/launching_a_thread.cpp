@@ -2,16 +2,15 @@
 #include <thread>
 
 void foo() {
-  printf("Hello from foo \n");
+  printf("Hello from foo - %d \n", std::this_thread::get_id());
 }
 
-class Callable_Class{
-
-  public:
-    void operator() {
-      printf("Hello from class with function call operator! \n");
-    }
-}
+class Callable_Class {
+public:
+  void operator()() {
+    printf("Hello from class with function call operator - %d \n", std::this_theread::get_id());
+  }
+};
 
 void run() {
   std::thread thread1(foo);
@@ -22,9 +21,10 @@ void run() {
   thread2.join();
 
   std::thread thread3([]{
-      printf("Hello from lamda \n");
+      printf("Hello from lambda - %d \n", std::this_thread::get_id());
       });
   thread3.join();
 
-  printf("Hello from main \n");
-}
+  printf("Hello from main - %d \n", std::this_thread::get_id());
+} 
+
