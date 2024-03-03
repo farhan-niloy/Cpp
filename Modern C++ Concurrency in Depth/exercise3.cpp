@@ -4,7 +4,7 @@
 #include <thread>
 #include <cstdio>
 
-void cleaners(std::queue<bool> &queue) {
+void cleaners(std::queue<bool>& queue) {
   while (true) {
     if (!queue.empty()) {
       bool order = queue.front();
@@ -20,7 +20,7 @@ void cleaners(std::queue<bool> &queue) {
   }
 }
 
-void workers(std::queue<bool> &queue) {
+void workers(std::queue<bool>& queue) {
   while (true) {
     if (!queue.empty()) {
       bool order = queue.front();
@@ -72,3 +72,4 @@ int main() {
 
   return 0;
 }
+
