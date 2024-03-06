@@ -31,6 +31,9 @@ int main() {
 
     std::thread t1(findOdd, start, end);
     std::thread t2(findEven, start, end);
+    t1.join();
+    t2.join();
+
     //findOdd(start, end);
     //findEven(start, end);
 
