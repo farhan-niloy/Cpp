@@ -29,8 +29,10 @@ int main() {
     
     auto startTime = high_resolution_clock::now();
 
-    findOdd(start, end);
-    findEven(start, end);
+    std::thread t1(findOdd, start, end);
+    std::thread t2(findEven, start, end);
+    //findOdd(start, end);
+    //findEven(start, end);
 
     auto endTime = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(endTime - startTime);
