@@ -1,14 +1,43 @@
-//
-//  main.cpp
-//  Thread
-//
-//  Created by Niloy Farhan on 6/3/24.
-//
-
 #include <iostream>
+#include <algorithm>
+#include <thread>
+#include <chrono>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+using namespace std::chrono;
+typedef unsigned long long ull;
+
+ull OddSum = 0;
+ull EvenSum = 0;
+
+void findEven(ull start, ull end) {
+    for (ull i = start; i <= end; i++)
+        if ((i&1) == 0)
+            EvenSum += 1;
+}
+
+void findOdd(ull start, ull end) {
+    for (ull i = start; i <= end; i++)
+        if ((i&1) != 0) {
+            OddSum += 1;
+        }
+}
+
+int main() {
+
+    ull start = 0, end = 19000000000;
+    
+    auto startTime = high_resolution_clock::now();
+
+    findOdd(start, end);
+    findEven(start, end);
+
+    auto endTime = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(endTime - startTime);
+
+    cout << "OddSum :" << OddSum << endl;
+    cout << "EvenSum :" << EvenSum << endl;
+    cout<< duration.count()/1000000 <<endl;
+
     return 0;
 }
