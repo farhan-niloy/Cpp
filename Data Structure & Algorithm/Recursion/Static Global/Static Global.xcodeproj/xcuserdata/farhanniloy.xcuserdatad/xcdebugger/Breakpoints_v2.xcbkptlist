@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "FBA5D3E5-70BB-4C6C-9A7F-6CFC90144323"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7BA0A57F-B19C-4AEA-979D-0441CF64EA46"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Static Global/main.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "main(argc, argv)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "7BA0A57F-B19C-4AEA-979D-0441CF64EA46 - 6cb4ef554a857b94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "Static Global"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/farhanniloy/Programming/Cpp/Cpp/Data%20Structure%20&amp;%20Algorithm/Recursion/Static%20Global/Static%20Global/main.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "7BA0A57F-B19C-4AEA-979D-0441CF64EA46 - 6cb4ef554a857b94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "Static Global"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/farhanniloy/Programming/Cpp/Cpp/Data%20Structure%20&amp;%20Algorithm/Recursion/Static%20Global/Static%20Global/main.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

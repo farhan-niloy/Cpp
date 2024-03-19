@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "271A7E14-2C09-4A4D-98F0-6DD0C03576FF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0022D85B-B61C-4EE4-B298-8F8393AB13A9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tree Recursion/main.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "main(argc, argv)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "0022D85B-B61C-4EE4-B298-8F8393AB13A9 - a32eb69fd34e6b4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "Tree Recursion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/farhanniloy/Programming/Cpp/Cpp/Data%20Structure%20&amp;%20Algorithm/Recursion/Tree%20Recursion/Tree%20Recursion/main.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "0022D85B-B61C-4EE4-B298-8F8393AB13A9 - a32eb69fd34e6b4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "Tree Recursion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/farhanniloy/Programming/Cpp/Cpp/Data%20Structure%20&amp;%20Algorithm/Recursion/Tree%20Recursion/Tree%20Recursion/main.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
