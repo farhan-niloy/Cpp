@@ -29,9 +29,27 @@ int BinarySearch(struct Array arr, int key) {
     return -1;
 }
 
+int RBinSearch(int a[], int l, int h, int key) {
+    
+    int mid;
+    
+    if(l<=h){
+        mid=(l+h)/2;
+        if(key==a[mid])
+            return mid;
+        else if(key<a[mid]) {
+            return RBinSearch(a, l, mid-1, key);
+        } else
+            return RBinSearch(a, mid+2, h, key);
+    }
+    
+    return -1;
+}
+
 int main(int argc, const char * argv[]) {
-    struct Array arr = {{2, 3, 4, 5, 6}, 5};
+    struct Array arr = {{2, 3, 4, 5, 6},5};
     printf("%d\n", BinarySearch(arr, 5));
+    printf("%d\n", RBinSearch(arr.A, 0, arr.length, 5));
     
     return 0;
 }
